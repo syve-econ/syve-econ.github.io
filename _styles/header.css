@@ -101,7 +101,7 @@ nav > a:hover {
   color: var(--primary);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   header:not([data-big]) {
     justify-content: flex-end;
   }
@@ -130,7 +130,7 @@ header[data-big] .home {
   flex-grow: 0;
 }
 header[data-big] .logo {
-  height: 200px;
+  height: 250px;
   flex-shrink: 0;
 }
 header[data-big] .title-text {

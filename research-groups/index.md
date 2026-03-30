@@ -1,7 +1,7 @@
 ---
 title: Research Groups
 nav:
-  order: 4
+  order: 5
   tooltip: Collaborative research groups
 ---
 

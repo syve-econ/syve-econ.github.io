@@ -15,12 +15,12 @@ The Society of Young Vietnamese Economists (SYVE) is a community of Vietnamese e
 
 {% capture text %}
 
-We organize weekly reading groups to present and discuss classic and seminal papers across various topics in economics.
+We organize weekly reading groups to present and discuss classic and seminal papers across various topics in economics, from microeconomics and game theory to development economics and econometrics.
 
 {%
   include button.html
-  link="seminars"
-  text="Reading group recordings"
+  link="reading-groups"
+  text="Join our reading groups"
   icon="fa-solid fa-arrow-right"
   flip=true
   style="bare"
@@ -31,14 +31,14 @@ We organize weekly reading groups to present and discuss classic and seminal pap
 {%
   include feature.html
   image="images/reading_group.jpg"
-  link="reading-group"
+  link="reading-groups"
   title="Reading Groups"
   text=text
 %}
 
 {% capture text %}
 
-Our seminars bring together early-career economists to share ideas and deepen their understanding of the field.
+Our seminars bring together early-career economists to present their research, exchange ideas, and receive feedback from peers across different fields of economics.
 
 {%
   include button.html
@@ -53,9 +53,11 @@ Our seminars bring together early-career economists to share ideas and deepen th
 
 {%
   include feature.html
-  image="images/seminars.jpg"
+  image="images/seminars.jpeg"
   link="seminars"
-  title="Seminars & Reading Groups"
+  title="Seminars"
+  flip=true
+  style="bare"
   text=text
 %}
 

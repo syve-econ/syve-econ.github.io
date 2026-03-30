@@ -12,8 +12,8 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
+  gap: 10px;
+  padding: 10px 20px;
   box-shadow: var(--shadow);
 
   @if $sticky {
@@ -106,6 +106,7 @@ nav {
 
 nav > a {
   padding: 5px;
+  font-weight: var(--bold);
 }
 
 nav > a:hover {

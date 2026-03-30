@@ -20,6 +20,6 @@ To join, send us an email at **syve.info@gmail.com** with a brief introduction a
 {%
   include button.html
   type="email"
-  text="syve.econ@gmail.com"
-  link="syve.econ@gmail.com"
+  text="syve.info@gmail.com"
+  link="syve.info@gmail.com"
 %}

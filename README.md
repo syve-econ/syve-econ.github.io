@@ -1,5 +1,5 @@
 <p align="center">
-<img height="200" src="images/logo.jpg" alt="SYVE Logo">
+<img height="200" src="images/1.jpg" alt="SYVE Logo">
 <h1 align="center">The Society of Young Vietnamese Economists (SYVE)</h1>
 </p>
 

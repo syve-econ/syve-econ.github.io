@@ -9,6 +9,8 @@ nav:
 
 The Society of Young Vietnamese Economists (SYVE) is a community of Vietnamese economists at early stages of their academic careers -- PhD students, postdocs, and junior researchers -- based at universities and institutions around the world. We foster intellectual exchange, collaborative research, and mutual support across all fields of economics.
 
+{% include section.html %}
+
 ## What We Do
 
 {% capture text %}
@@ -16,14 +18,23 @@ The Society of Young Vietnamese Economists (SYVE) is a community of Vietnamese e
 We organize weekly reading groups to present and discuss classic and seminal papers across various topics in economics.
 
 {%
-  include feature.html
-  image="images/reading_group.jpg"
+  include button.html
   link="seminars"
-  title="Seminars & Reading Groups"
-  text=text
+  text="Reading group recordings"
+  icon="fa-solid fa-arrow-right"
+  flip=true
+  style="bare"
 %}
 
 {% endcapture %}
+
+{%
+  include feature.html
+  image="images/reading_group.jpg"
+  link="reading-group"
+  title="Reading Groups"
+  text=text
+%}
 
 {% capture text %}
 
@@ -40,28 +51,11 @@ Our seminars bring together early-career economists to share ideas and deepen th
 
 {% endcapture %}
 
-{% capture text %}
-
-Our members are PhD students, postdocs, and early-career researchers at universities and institutions worldwide. We are united by a shared passion for economics and a desire to support one another's academic journeys.
-
-{%
-  include button.html
-  link="members"
-  text="Meet our members"
-  icon="fa-solid fa-arrow-right"
-  flip=true
-  style="bare"
-%}
-
-{% endcapture %}
-
 {%
   include feature.html
-  image="images/seminars.jpeg"
-  link="members"
-  title="Our Members"
-  flip=true
-  style="bare"
+  image="images/seminars.jpg"
+  link="seminars"
+  title="Seminars & Reading Groups"
   text=text
 %}
 

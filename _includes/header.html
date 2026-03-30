@@ -22,10 +22,6 @@
       <span class="logo">
         {% if svg %}
           {{ svg | file_read }}
-        {% elsif page.url == "/" %}
-          <img src="{{ logo | relative_url | uri_escape }}" alt="logo">
-        {% elsif round_logo %}
-          <img src="{{ round_logo | relative_url | uri_escape }}" alt="logo">
         {% else %}
           <img src="{{ logo | relative_url | uri_escape }}" alt="logo">
         {% endif %}

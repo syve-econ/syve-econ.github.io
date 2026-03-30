@@ -1,6 +1,6 @@
-<h1 align="center">The Society of Young Vietnamese Economists (SYVE)</h1>
 <p align="center">
 <img height="200" src="images/logo.jpg" alt="SYVE Logo">
+<h1 align="center">The Society of Young Vietnamese Economists (SYVE)</h1>
 </p>
 
 A community of young Vietnamese economists fostering academic exchange, collaborative research, and intellectual growth in economics.

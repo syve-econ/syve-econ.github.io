@@ -28,7 +28,7 @@ We organize weekly reading groups to present and discuss classic and seminal pap
 
 {%
   include feature.html
-  image="images/background.jpg"
+  image="images/reading_group.jpg"
   link="seminars"
   title="Seminars & Reading Groups"
   text=text
@@ -51,7 +51,7 @@ Our members are PhD students, postdocs, and early-career researchers at universi
 
 {%
   include feature.html
-  image="images/background.jpg"
+  image="images/seminars.jpeg"
   link="members"
   title="Our Members"
   flip=true
@@ -76,7 +76,7 @@ We are building collaborative research groups across key areas of economics. Sta
 
 {%
   include feature.html
-  image="images/background.jpg"
+  image="images/research_groups.jpg"
   link="research-groups"
   title="Research Groups"
   text=text

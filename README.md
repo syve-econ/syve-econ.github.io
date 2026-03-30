@@ -22,5 +22,5 @@ This website is built using the [Lab Website Template](https://github.com/greene
 
 ## Contact
 
-- Email: syve.econ@gmail.com
+- Email: syve.info@gmail.com
 - GitHub: [syve-econ](https://github.com/syve-econ)

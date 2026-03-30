@@ -1,35 +1,39 @@
 ---
+title: Home
+nav:
+  order: 1
+  tooltip: Home
 ---
 
-# Lab Website Template
+# The Society of Young Vietnamese Economists
 
-[Lab Website Template](https://github.com/greenelab/lab-website-template) is an easy-to-use, flexible website template for [labs](https://www.greenelab.com/).
-Spend less time worrying about managing a website and citations, and more time running your lab.
+We are a community of young Vietnamese economists dedicated to fostering academic exchange, collaborative research, and intellectual growth across all fields of economics.
 
 {%
   include button.html
-  type="docs"
-  link="https://greene-lab.gitbook.io/lab-website-template-docs"
+  type="email"
+  text="Get in touch"
+  link="syve.econ@gmail.com"
 %}
 {%
   include button.html
   type="github"
-  text="On GitHub"
-  link="greenelab/lab-website-template"
+  text="GitHub"
+  link="syve-econ"
 %}
 
 {% include section.html %}
 
-## Highlights
+## What We Do
 
 {% capture text %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+We organize weekly reading groups to present and discuss classic and seminal papers across various topics in economics. Our seminars bring together early-career economists to share ideas and deepen their understanding of the field.
 
 {%
   include button.html
-  link="research"
-  text="See our publications"
+  link="seminars"
+  text="View our seminars"
   icon="fa-solid fa-arrow-right"
   flip=true
   style="bare"
@@ -39,20 +43,20 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {%
   include feature.html
-  image="images/photo.jpg"
-  link="research"
-  title="Our Research"
+  image="images/background.jpg"
+  link="seminars"
+  title="Seminars & Reading Groups"
   text=text
 %}
 
 {% capture text %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Our members are PhD students, postdocs, and early-career researchers at universities and institutions worldwide. We are united by a shared passion for economics and a desire to support one another's academic journeys.
 
 {%
   include button.html
-  link="projects"
-  text="Browse our projects"
+  link="members"
+  text="Meet our members"
   icon="fa-solid fa-arrow-right"
   flip=true
   style="bare"
@@ -62,9 +66,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {%
   include feature.html
-  image="images/photo.jpg"
-  link="projects"
-  title="Our Projects"
+  image="images/background.jpg"
+  link="members"
+  title="Our Members"
   flip=true
   style="bare"
   text=text
@@ -72,12 +76,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {% capture text %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+We are building collaborative research groups across key areas of economics. Stay tuned for upcoming projects and opportunities to get involved.
 
 {%
   include button.html
-  link="team"
-  text="Meet our team"
+  link="research-groups"
+  text="Learn more"
   icon="fa-solid fa-arrow-right"
   flip=true
   style="bare"
@@ -87,8 +91,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {%
   include feature.html
-  image="images/photo.jpg"
-  link="team"
-  title="Our Team"
+  image="images/background.jpg"
+  link="research-groups"
+  title="Research Groups"
   text=text
 %}

@@ -1,24 +1,24 @@
 ---
 ---
 
-// colors
+// colors - SYVE brand: navy blue + bright blue network
 [data-dark="false"] {
-  --primary: #0795d9;
-  --secondary: #7dd3fc;
-  --text: #000000;
+  --primary: #1565c0;
+  --secondary: #42a5f5;
+  --text: #1a1a2e;
   --background: #ffffff;
-  --background-alt: #fafafa;
+  --background-alt: #f5f8fc;
   --light-gray: #e0e0e0;
   --gray: #808080;
   --dark-gray: #404040;
   --overlay: #00000020;
 }
 [data-dark="true"] {
-  --primary: #0795d9;
-  --secondary: #075985;
+  --primary: #42a5f5;
+  --secondary: #0d47a1;
   --text: #ffffff;
-  --background: #181818;
-  --background-alt: #1c1c1c;
+  --background: #0f0f1a;
+  --background-alt: #14142a;
   --light-gray: #404040;
   --gray: #808080;
   --dark-gray: #b0b0b0;

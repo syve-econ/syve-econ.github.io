@@ -1,32 +1,26 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17228741.svg)](https://doi.org/10.5281/zenodo.17228741)
-
-<h1 align="center">The Society of Young Vietnamese Economists</h1>
+<h1 align="center">The Society of Young Vietnamese Economists (SYVE)</h1>
 <p align="center">
-<img height="200" src="https://raw.githubusercontent.com/greenelab/lab-website-template/main/images/share.jpg?raw=true" alt="Lab Website Template">
+<img height="200" src="images/logo.jpg" alt="SYVE Logo">
 </p>
 
-Lab Website Template (LWT) is an easy-to-use, flexible website template for labs.
-Spend less time worrying about managing a website and citations, and more time running your lab.
+A community of young Vietnamese economists fostering academic exchange, collaborative research, and intellectual growth in economics.
 
-👇👇 **Get Started** 👇👇
+## About
 
-[**Documentation**](https://greene-lab.gitbook.io/lab-website-template-docs)
+SYVE brings together PhD students, postdocs, and early-career researchers in economics from Vietnamese backgrounds at universities and institutions worldwide.
 
-## Key Features
+## Features
 
-- 🤖 Based on Git, GitHub, and Jekyll.
-- 📜 Automatically generated citations from simple identifiers (DOI, PubMed, ORCID, and many more) using Manubot. E.g. `doi:1234/5678` -> `title`, `authors`, `publisher`, `date`, etc.
-- 🧱 A comprehensive and flexible suite of pre-made components (building blocks) for structuring and styling your website:
-  - Formatted tables, code blocks, figures, and other basic elements.
-  - Citations with thumbnails and other rich details.
-  - List large sets of data with flexible filters and components.
-  - ...many more
-- 👁️ Automatic pull request previews.
-- ⚙️ Easy and automated configuration.
-- 👥 Team member pages with bios, roles, and social media links.
-- 🖋️ Blog posts with tags and rich content.
-- 📱 Works and looks good on desktop and mobile.
-- 🤝 Great documentation and support (if we do say so ourselves).
-- ... and much more!
+- **Seminars & Reading Groups** -- Bi-weekly reading groups discussing classic and seminal economics papers
+- **Research Groups** -- Collaborative research across key areas of economics (forthcoming)
+- **Blog** -- News, updates, and insights from the community
+- **Member Profiles** -- Connecting our growing network of economists
 
-![GitHub last commit](https://img.shields.io/github/last-commit/greenelab/lab-website-template)
+## Built With
+
+This website is built using the [Lab Website Template](https://github.com/greenelab/lab-website-template) by Greene Lab.
+
+## Contact
+
+- Email: syve.econ@gmail.com
+- GitHub: [syve-econ](https://github.com/syve-econ)

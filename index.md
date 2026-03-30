@@ -5,8 +5,6 @@ nav:
   tooltip: Home
 ---
 
-# The Society of Young Vietnamese Economists
-
 We are a community of young Vietnamese economists dedicated to fostering academic exchange, collaborative research, and intellectual growth across all fields of economics.
 
 {%

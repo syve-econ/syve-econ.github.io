@@ -2,13 +2,14 @@
 title: SYVE
 subtitle: The Society of Young Vietnamese Economists
 description: A community of young Vietnamese economists fostering academic exchange, collaborative research, and intellectual growth in economics.
+logo-text: false
 header: images/background.jpg
 footer: images/background.jpg
 proofer: false
 
 # site social media and other links
 links:
-  email: syve.econ@gmail.com
+  email: syve.info@gmail.com
   github: syve-econ
   twitter: syve_econ
 

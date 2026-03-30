@@ -6,6 +6,8 @@ logo-text: false
 header: images/background.jpg
 footer: images/background.jpg
 proofer: false
+url: https://syve-econ.github.io
+baseurl: ""
 
 # site social media and other links
 links:

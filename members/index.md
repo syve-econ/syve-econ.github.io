@@ -7,7 +7,7 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-users" %}Members
 
-We are a growing community of young Vietnamese economists -- PhD students, postdocs, and early-career researchers -- based at universities and institutions around the world.
+Our members are PhD students, postdocs, and early-career researchers at universities and institutions worldwide. We are united by a shared passion for economics and a desire to support one another's academic journeys.
 
 {% include section.html %}
 

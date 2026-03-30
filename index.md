@@ -5,20 +5,7 @@ nav:
   tooltip: Home
 ---
 
-We are a community of young Vietnamese economists dedicated to fostering academic exchange, collaborative research, and intellectual growth across all fields of economics.
-
-{%
-  include button.html
-  type="email"
-  text="Get in touch"
-  link="syve.econ@gmail.com"
-%}
-{%
-  include button.html
-  type="github"
-  text="GitHub"
-  link="syve-econ"
-%}
+The Society of Young Vietnamese Economists (SYVE) is a community of Vietnamese economists at early stages of their academic careers -- PhD students, postdocs, and junior researchers -- based at universities and institutions around the world. We foster intellectual exchange, collaborative research, and mutual support across all fields of economics.
 
 {% include section.html %}
 

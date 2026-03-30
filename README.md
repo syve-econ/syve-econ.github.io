@@ -11,7 +11,7 @@ SYVE brings together PhD students, postdocs, and early-career researchers in eco
 
 ## Features
 
-- **Seminars & Reading Groups** -- Bi-weekly reading groups discussing classic and seminal economics papers
+- **Seminars & Reading Groups** -- Weekly reading groups discussing classic and seminal economics papers
 - **Research Groups** -- Collaborative research across key areas of economics (forthcoming)
 - **Blog** -- News, updates, and insights from the community
 - **Member Profiles** -- Connecting our growing network of economists

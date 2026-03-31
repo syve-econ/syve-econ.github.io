@@ -35,6 +35,14 @@ header a {
   height: 100%;
 }
 
+.logo svg .ring {
+  transform-origin: center;
+}
+
+.logo svg .logo-img {
+  transform-origin: center;
+}
+
 .title-text {
   display: flex;
   justify-content: flex-start;

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-60 -60 120 120">
+  <defs>
+    <clipPath id="logo-circle-clip">
+      <circle cx="0" cy="0" r="34"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .anim-ring {
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      opacity: 0;
+      transform-origin: center;
+      animation-duration: 2.5s;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+    }
+    .anim-logo-img {
+      opacity: 0;
+      transform-origin: center;
+      animation: anim_logo_fade 2.5s ease forwards;
+    }
+
+    #anim_ring_1 { animation-name: anim_ring_1; }
+    #anim_ring_2 { animation-name: anim_ring_2; }
+    #anim_ring_3 { animation-name: anim_ring_3; }
+    #anim_ring_4 { animation-name: anim_ring_4; }
+    #anim_ring_5 { animation-name: anim_ring_5; }
+
+    @keyframes anim_ring_1 {
+      0%, 40% { opacity: 0; transform: rotate(-10deg); }
+      80% { opacity: 0.7; transform: rotate(0deg); }
+      100% { opacity: 0.5; transform: rotate(0deg); }
+    }
+    @keyframes anim_ring_2 {
+      0%, 30% { opacity: 0; transform: rotate(25deg); }
+      70% { opacity: 0.7; transform: rotate(0deg); }
+      100% { opacity: 0.45; transform: rotate(0deg); }
+    }
+    @keyframes anim_ring_3 {
+      0%, 20% { opacity: 0; transform: rotate(-40deg); }
+      60% { opacity: 0.7; transform: rotate(0deg); }
+      100% { opacity: 0.4; transform: rotate(0deg); }
+    }
+    @keyframes anim_ring_4 {
+      0%, 10% { opacity: 0; transform: rotate(55deg); }
+      50% { opacity: 0.7; transform: rotate(0deg); }
+      100% { opacity: 0.35; transform: rotate(0deg); }
+    }
+    @keyframes anim_ring_5 {
+      0% { opacity: 0; transform: rotate(-70deg); }
+      40% { opacity: 0.7; transform: rotate(0deg); }
+      100% { opacity: 0.3; transform: rotate(0deg); }
+    }
+    @keyframes anim_logo_fade {
+      0%, 50% { opacity: 0; transform: scale(0.85); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+  </style>
+
+  <!-- Animated concentric rings (outermost to innermost) -->
+  <circle id="anim_ring_5" class="anim-ring" cx="0" cy="0" r="56" stroke="#1565c0" stroke-dasharray="8 6"/>
+  <circle id="anim_ring_4" class="anim-ring" cx="0" cy="0" r="52" stroke="#1976d2" stroke-dasharray="12 8"/>
+  <circle id="anim_ring_3" class="anim-ring" cx="0" cy="0" r="48" stroke="#1e88e5" stroke-dasharray="20 10"/>
+  <circle id="anim_ring_2" class="anim-ring" cx="0" cy="0" r="44" stroke="#2196f3" stroke-dasharray="30 12"/>
+  <circle id="anim_ring_1" class="anim-ring" cx="0" cy="0" r="40" stroke="#42a5f5"/>
+
+  <!-- Round logo image, clipped to circle -->
+  <image class="anim-logo-img" x="-34" y="-34" width="68" height="68" href="/images/round_logo.png" clip-path="url(#logo-circle-clip)"/>
+</svg>

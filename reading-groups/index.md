@@ -32,12 +32,14 @@ Our reading groups span across economics, including:
 
 {% include section.html %}
 
-## Upcoming Sessions
+## Current Reading Groups
 
-*Schedule coming soon.* If you are interested in presenting or joining our reading groups, please [contact us](../contact).
+### [Growth & Innovation Reading Group](macro/)
+
+A reading group focused on economic growth, innovation, and technological change. We read foundational and frontier papers spanning endogenous growth theory, directed technical change, firm dynamics, and the economics of innovation.
+
+[View Full Syllabus](macro/){:.inline-button}
 
 {% include section.html %}
 
-## Past Sessions
-
-*Archive coming soon.*
+If you are interested in presenting or joining our reading groups, please [contact us](../contact).

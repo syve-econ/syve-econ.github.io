@@ -35,14 +35,6 @@ header a {
   height: 100%;
 }
 
-.logo svg .ring {
-  transform-origin: center;
-}
-
-.logo svg .logo-img {
-  transform-origin: center;
-}
-
 .title-text {
   display: flex;
   justify-content: flex-start;
@@ -138,7 +130,7 @@ header[data-big] .home {
   flex-grow: 0;
 }
 header[data-big] .logo {
-  height: 250px;
+  height: 320px;
   flex-shrink: 0;
 }
 header[data-big] .title-text {

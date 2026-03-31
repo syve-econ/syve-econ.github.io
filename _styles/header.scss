@@ -1,7 +1,7 @@
 ---
 ---
 
-$logo-big: 250px;
+$logo-big: 320px;
 $logo: 100px;
 $big-padding: 5px;
 $collapse: 700px;
@@ -47,13 +47,6 @@ header a {
   height: 100%;
 }
 
-.logo svg .ring {
-  transform-origin: center;
-}
-
-.logo svg .logo-img {
-  transform-origin: center;
-}
 
 .title-text {
   display: flex;

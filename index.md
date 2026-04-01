@@ -12,7 +12,7 @@ The **Society of Young Vietnamese Economists (SYVE)** is a community of Vietname
 {%
   include button.html
   text="Join SYVE"
-  link="https://forms.gle/iw4Y3uvJauTPuz2PA"
+  link="contact"
   icon="fa-solid fa-user-plus"
 %}
 

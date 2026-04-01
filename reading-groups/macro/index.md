@@ -1,19 +1,19 @@
 ---
-title: Growth & Innovation Reading Group
+title: Growth & Innovation
 ---
 
 # {% include icon.html icon="fa-solid fa-seedling" %}Growth & Innovation Reading Group
 
 We meet regularly to present and discuss classic and frontier papers on economic growth, innovation, and technological change. Each session is led by a presenter who walks through the paper and facilitates group discussion.
 
-**Full reading list & schedule**: [Google Sheet](https://docs.google.com/spreadsheets/d/1wBmGBDNjzm3XV-Swj0teQVn1tKtzSrRMLj9yhXPaq0M/edit?gid=0#gid=0)
+**Full reading list & schedule**: [Link](https://docs.google.com/spreadsheets/d/1wBmGBDNjzm3XV-Swj0teQVn1tKtzSrRMLj9yhXPaq0M/edit?gid=0#gid=0)
 
 {% include section.html %}
 
 ## Upcoming Sessions
 
 | Date | Paper | Presenter |
-|------|-------|-----------|
+|------|:------|-----------|
 | 2026/04/11 | Hsieh, Hurst, Jones, Klenow -- [The Allocation of Talent and U.S. Economic Growth](https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA11427) | Chinh Duc Hoang |
 | 2026/04/04 | Konig, Storesletten, Song, Zilibotti -- [Reconciling Models of Diffusion and Innovation: A Theory of the Productivity Distribution and Technology Frontier](https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA20080) | Hoang The-Nguyen |
 | TBD | Akcigit, Baslandze, Lotti -- [Connecting to Power: Political Connections, Innovation, and Firm Dynamics](https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA17408) | Manh-Duc Doan |
@@ -23,9 +23,9 @@ We meet regularly to present and discuss classic and frontier papers on economic
 ## Past Sessions
 
 | Date | Paper | Presenter | Slides |
-|------|-------|-----------|--------|
+|------|:------|-----------|--------|
 | 2026/02/07 | Koenig -- [Technical Change and Superstar Effects](https://pubs.aeaweb.org/doi/pdfplus/10.1257/aeri.20210539) | Anh Tran | |
-| 2026/01/24 | Moll, Rachel, Restrepo -- [Uneven Growth: Automation's Impact on Income and Wealth Inequality](https://pascual.scripts.mit.edu/research/unevengrowth/) | Thanh Q. Chan | |
+| 2026/01/24 | Moll, Rachel, Restrepo -- [Uneven Growth: Automation's Impact on Income and Wealth Inequality](https://pascual.scripts.mit.edu/research/unevengrowth/) | Thanh Q. Tran | |
 | 2025/12/06 | Moscona and Sastry -- [Inappropriate Technology: Evidence from Global Agriculture](https://economics.mit.edu/sites/default/files/inline-files/IT_Final_Nov2022.pdf) | Anh Tran | |
 | 2025/11/08 | Atkin, Costinot, Fukui -- [Globalization and the Ladder of Development](https://economics.mit.edu/sites/default/files/2024-03/mutvc_LATEST.pdf) | Kien Hoang-Le | [Slides](Atkin2025_slide.pdf) |
 | 2025/11/01 | Prato -- [The Global Race for Talent](https://drive.google.com/file/d/1AdHMVfhKBpf2_gTxIRYBKlTBy8x6XvgH/view) | Duong Bui | [Slides](Prato-2022-slide.pdf) |

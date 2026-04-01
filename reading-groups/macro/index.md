@@ -2,7 +2,7 @@
 title: Growth & Innovation
 ---
 
-# {% include icon.html icon="fa-solid fa-seedling" %}Growth & Innovation Reading Group
+# {% include icon.html icon="fa-solid fa-seedling" %}Growth & Innovation
 
 We meet regularly to present and discuss classic and frontier papers on economic growth, innovation, and technological change. Each session is led by a presenter who walks through the paper and facilitates group discussion.
 

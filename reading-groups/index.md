@@ -7,38 +7,25 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-book-open-reader" %}Reading Groups
 
-We organize weekly reading groups to present and discuss classic or seminal papers on various topics in economics. Each session is led by a member who presents a paper and facilitates group discussion.
+At SYVE, we run reading groups where members take turns presenting and discussing important papers in economics. Each session features one presenter who walks through a paper's key ideas, methods, and contributions, followed by an open group discussion. Papers are shared ahead of time so everyone can come prepared and engage deeply with the material.
 
-{% include section.html %}
-
-## Format
-
-- Weekly sessions
-- One presenter per session
-- Open discussion following the presentation
-- Papers shared in advance for preparation
-
-## Topics
-
-Our reading groups span across economics, including:
-
-- Microeconomics & Game Theory
-- Macroeconomics & Monetary Economics
-- Development Economics
-- Labor Economics
-- Econometrics & Causal Inference
-- Trade & International Economics
-- Public Economics & Political Economy
+Our reading groups cover a broad range of fields, from microeconomics and game theory to macroeconomics, development, labor, econometrics, trade, and public economics. Whether you are looking to build foundational knowledge or stay current with frontier research, there is a group for you.
 
 {% include section.html %}
 
 ## Current Reading Groups
 
-### [Growth & Innovation Reading Group](macro/)
+### [Growth & Innovation](macro/)
 
-A reading group focused on economic growth, innovation, and technological change. We read foundational and frontier papers spanning endogenous growth theory, directed technical change, firm dynamics, and the economics of innovation.
+Covers the economics of growth, innovation, and technological change. Topics include endogenous growth theory, directed technical change, firm dynamics, creative destruction, the allocation of talent, and the role of innovation policy. We read both foundational contributions and recent working papers from leading researchers in the field.
 
-[View Full Syllabus](macro/){:.inline-button}
+[View full reading list and materials](macro/){:.inline-button}
+
+### [Econometrics & Machine Learning](metrics/)
+
+Explores recent and emerging developments at the intersection of econometrics and machine learning. We discuss new estimation and inference methods, causal machine learning, high-dimensional techniques, and how advances in ML are reshaping empirical practice in economics.
+
+[View full reading list and materials](metrics/){:.inline-button}
 
 {% include section.html %}
 

@@ -29,4 +29,4 @@ Explores recent and emerging developments at the intersection of econometrics an
 
 {% include section.html %}
 
-If you are interested in presenting or joining our reading groups, please [join us](../contact).
+If you are interested in presenting or joining our reading groups, please [contact us](../contact).

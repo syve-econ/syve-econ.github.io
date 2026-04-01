@@ -24,9 +24,9 @@ We meet regularly to present and discuss classic and frontier papers on economic
 
 | Date | Paper | Presenter | Slides |
 |------|:------|-----------|--------|
-| 2026/02/07 | Koenig -- [Technical Change and Superstar Effects](https://pubs.aeaweb.org/doi/pdfplus/10.1257/aeri.20210539) | Anh Tran | |
-| 2026/01/24 | Moll, Rachel, Restrepo -- [Uneven Growth: Automation's Impact on Income and Wealth Inequality](https://pascual.scripts.mit.edu/research/unevengrowth/) | Thanh Q. Tran | |
-| 2025/12/06 | Moscona and Sastry -- [Inappropriate Technology: Evidence from Global Agriculture](https://economics.mit.edu/sites/default/files/inline-files/IT_Final_Nov2022.pdf) | Anh Tran | |
+| 2026/02/07 | Koenig -- [Technical Change and Superstar Effects](https://pubs.aeaweb.org/doi/pdfplus/10.1257/aeri.20210539) | Anh Tran | [Slides](koenig_tv_slide.pdf) |
+| 2026/01/24 | Moll, Rachel, Restrepo -- [Uneven Growth: Automation's Impact on Income and Wealth Inequality](https://pascual.scripts.mit.edu/research/unevengrowth/) | Thanh Q. Tran | [Slides](UG_slides.pdf) |
+| 2025/12/06 | Moscona and Sastry -- [Inappropriate Technology: Evidence from Global Agriculture](https://economics.mit.edu/sites/default/files/inline-files/IT_Final_Nov2022.pdf) | Anh Tran | [Slides](inapp_tech_slide.pdf) |
 | 2025/11/08 | Atkin, Costinot, Fukui -- [Globalization and the Ladder of Development](https://economics.mit.edu/sites/default/files/2024-03/mutvc_LATEST.pdf) | Kien Hoang-Le | [Slides](Atkin2025_slide.pdf) |
 | 2025/11/01 | Prato -- [The Global Race for Talent](https://drive.google.com/file/d/1AdHMVfhKBpf2_gTxIRYBKlTBy8x6XvgH/view) | Duong Bui | [Slides](Prato-2022-slide.pdf) |
 | 2025/10/25 | Bloom, Jones, Webb, Van Reenen -- [Are Ideas Getting Harder to Find?](https://web.stanford.edu/~chadj/IdeaPF.pdf) | Thinh Bui | [Slides](Are-Ideas-Getting-Harder-to-Find.pdf) |

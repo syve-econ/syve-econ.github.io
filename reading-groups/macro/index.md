@@ -15,7 +15,7 @@ We meet regularly to present and discuss classic and frontier papers on economic
 | Date | Paper | Presenter |
 |------|-------|-----------|
 | 2026/04/11 | Hsieh, Hurst, Jones, Klenow -- [The Allocation of Talent and U.S. Economic Growth](https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA11427) | Chinh Duc Hoang |
-| TBD | Konig, Storesletten, Song, Zilibotti -- [Reconciling Models of Diffusion and Innovation: A Theory of the Productivity Distribution and Technology Frontier](https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA20080) | Hoang Nguyen |
+| 2026/04/04 | Konig, Storesletten, Song, Zilibotti -- [Reconciling Models of Diffusion and Innovation: A Theory of the Productivity Distribution and Technology Frontier](https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA20080) | Hoang The-Nguyen |
 | TBD | Akcigit, Baslandze, Lotti -- [Connecting to Power: Political Connections, Innovation, and Firm Dynamics](https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA17408) | Manh-Duc Doan |
 
 {% include section.html %}

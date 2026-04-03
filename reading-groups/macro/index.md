@@ -32,7 +32,7 @@ We meet regularly to present and discuss classic and frontier papers on economic
 | 2025/10/25 | Bloom, Jones, Webb, Van Reenen -- [Are Ideas Getting Harder to Find?](https://web.stanford.edu/~chadj/IdeaPF.pdf) | Thinh Bui | [Slides](Are-Ideas-Getting-Harder-to-Find.pdf) |
 | 2025/10/11 | Akcigit and Kerr -- [Growth through Heterogeneous Innovations](https://www.journals.uchicago.edu/doi/abs/10.1086/697901) | Thinh Bui | [Slides](Growth-through-Heterogeneous-Innovations.pdf) |
 | 2025/09/27 | Acemoglu -- [Distorted Innovation: Does the Market Get the Direction of Technology Right?](https://blueprintcdn.com/wp-content/uploads/2023/01/Blueprint-Discussion-Paper-2023.02-Acemoglu.pdf) | Anh Tran | [Slides](slide_acemoglu_distortion.pdf) |
-| 2025/09/13 | Akcigit, Aghion, Howitt -- [What Do We Learn from Schumpeterian Growth Theory?](https://www.nber.org/system/files/working_papers/w18824/w18824.pdf) | Thanh Q. Chan | [Slides](aah_slides.pdf) |
+| 2025/09/13 | Akcigit, Aghion, Howitt -- [What Do We Learn from Schumpeterian Growth Theory?](https://www.nber.org/system/files/working_papers/w18824/w18824.pdf) | Thanh Q. Tran | [Slides](aah_slides.pdf) |
 | 2025/08/21 | Lucas and Moll -- [Knowledge Growth and the Allocation of Time](https://www.journals.uchicago.edu/doi/full/10.1086/674363) | Duong Bui | [Slides](Lucas-and-Moll-2014.pdf) |
 | 2025/08/12 | Akcigit -- [Economic Growth: The Past, the Present, and the Future](https://www.jstor.org/stable/10.1086/720397) | Luong Nguyen | [Slides](akcigit_slides_ln_0812.pdf) |
 | 2025/08/12 | Jones -- [The Past and Future of Economic Growth: A Semi-Endogenous Perspective](https://web.stanford.edu/~chadj/annualreview.pdf) | Anh Tran | [Slides](slide_growth_jones.pdf) |

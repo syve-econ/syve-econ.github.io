@@ -1,5 +1,5 @@
 ---
-name: Trần Quang Thanh
+name: Quang-Thanh Tran
 description: Postdoc
 role: postdoc
 affiliation: DEPOCEN

@@ -1,5 +1,5 @@
 ---
-name: Phan Nhat Quang
+name: Nhat-Quang Phan
 description: Master student
 role: undergrad
 affiliation: Master student/ RA

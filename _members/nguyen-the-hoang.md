@@ -1,5 +1,5 @@
 ---
-name: Nguyễn Thế Hoàng
+name: The-Hoang Nguyen
 description: PhD student
 role: phd
 affiliation: University College London

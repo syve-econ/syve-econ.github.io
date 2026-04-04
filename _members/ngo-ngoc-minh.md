@@ -1,5 +1,5 @@
 ---
-name: Ngô Ngọc Minh
+name: Ngoc-Minh Ngo
 description: Master student
 role: undergrad
 affiliation: National University of Singapore

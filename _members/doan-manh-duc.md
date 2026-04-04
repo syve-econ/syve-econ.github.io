@@ -1,5 +1,5 @@
 ---
-name: Đoàn Mạnh Đức
+name: Manh-Duc Doan
 description: Predoc/RA
 role: programmer
 affiliation: DEPOCEN

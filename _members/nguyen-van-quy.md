@@ -1,5 +1,5 @@
 ---
-name: Nguyễn Văn Quý
+name: Van-Quy Nguyen
 description: Assistant Professor
 role: postdoc
 affiliation: National Economics University

@@ -1,5 +1,5 @@
 ---
-name: Tran Hai Anh
+name: Hai-Anh Tran
 description: PhD student
 role: phd
 affiliation: Princeton University

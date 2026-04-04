@@ -1,5 +1,5 @@
 ---
-name: Phan Tường Vy
+name: Tuong-Vy Phan
 description: Predoc/RA
 role: programmer
 affiliation: National Economics University

@@ -1,5 +1,5 @@
 ---
-name: Bùi Tùng Dương
+name: Tung-Duong Bui
 description: PhD student
 role: phd
 affiliation: University of Western Ontario, Canada

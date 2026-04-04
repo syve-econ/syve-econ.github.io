@@ -34,10 +34,10 @@
   align-items: center;
   width: calc(20px + 10%);
   aspect-ratio: 1/1;
-  border-radius: 999px;
+  border-radius: 10px;
   background: var(--background);
   box-shadow: var(--shadow);
-  transform: translate(14%, 14%);
+  transform: translate(-20%, -20%);
 }
 
 .portrait[data-style=small] .icon {
@@ -52,8 +52,8 @@
 .portrait-image {
   width: 100%;
   margin-bottom: 20px;
-  aspect-ratio: 1/1;
-  border-radius: 999px;
+  aspect-ratio: 3/4;
+  border-radius: 10px;
   object-fit: cover;
   box-shadow: var(--shadow);
 }

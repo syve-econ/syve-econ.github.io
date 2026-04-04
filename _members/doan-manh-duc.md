@@ -5,6 +5,7 @@ description: RA, DEPOCEN
 role: programmer
 affiliation: DEPOCEN
 image: images/placeholder.jpg
+link: https://manhducdoan.github.io
 links:
   home-page: https://manhducdoan.github.io
   email: manhduc.doan03@gmail.com

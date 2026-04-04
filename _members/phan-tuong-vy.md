@@ -5,6 +5,7 @@ description: RA, NEU
 role: programmer
 affiliation: National Economics University
 image: images/placeholder.jpg
+link: https://vytuongphan.github.io/
 links:
   home-page: https://vytuongphan.github.io/
   email: phantuongvy0111@gmail.com

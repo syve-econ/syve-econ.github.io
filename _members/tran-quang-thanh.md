@@ -4,7 +4,7 @@ name: Quang-Thanh Tran
 description: Postdoc, NEU
 role: pi
 affiliation: National Economics University
-image: images/placeholder.jpg
+image: images/quang-thanh-tran.jpg
 link: https://thanhqtran.github.io
 links:
   home-page: https://thanhqtran.github.io

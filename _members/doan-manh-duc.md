@@ -1,7 +1,7 @@
 ---
 date: 2000-02-02
 name: Manh-Duc Doan
-description: Predoc/RA
+description: RA, DEPOCEN
 role: programmer
 affiliation: DEPOCEN
 image: images/placeholder.jpg

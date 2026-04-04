@@ -1,7 +1,7 @@
 ---
 date: 2000-02-07
 name: Tuong-Vy Phan
-description: Predoc/RA
+description: RA, NEU
 role: programmer
 affiliation: National Economics University
 image: images/placeholder.jpg

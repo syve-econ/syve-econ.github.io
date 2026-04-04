@@ -1,7 +1,7 @@
 ---
 date: 2000-02-04
 name: The-Hoang Nguyen
-description: PhD student
+description: PhD Student, UCL
 role: phd
 affiliation: University College London
 image: images/placeholder.jpg

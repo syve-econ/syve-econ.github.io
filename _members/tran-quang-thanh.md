@@ -1,9 +1,9 @@
 ---
 date: 2000-01-01
 name: Quang-Thanh Tran
-description: Postdoc
+description: Postdoc, NEU
 role: pi
-affiliation: DEPOCEN
+affiliation: National Economics University
 image: images/placeholder.jpg
 links:
   home-page: https://thanhqtran.github.io

@@ -1,4 +1,10 @@
 {% assign member = include %}
+{% assign profile_link = member.links["home-page"] | default: member.links["google-scholar"] %}
+{% unless profile_link %}
+  {% if member.links["orcid"] %}
+    {% assign profile_link = "https://orcid.org/" | append: member.links["orcid"] %}
+  {% endif %}
+{% endunless %}
 
 <div class="member-card">
   <img
@@ -10,30 +16,20 @@
   >
 
   {% if member.name %}
-    <span class="member-card-name">
-      {{ member.name }}
-    </span>
+    {% if profile_link %}
+      <a href="{{ profile_link }}" class="member-card-name">
+        {{ member.name }}
+      </a>
+    {% else %}
+      <span class="member-card-name">
+        {{ member.name }}
+      </span>
+    {% endif %}
   {% endif %}
 
   {% if member.description %}
     <span class="member-card-description">
       {{ member.description }}
     </span>
-  {% endif %}
-
-  {% if member.affiliation %}
-    <span class="member-card-affiliation">
-      {{ member.affiliation }}
-    </span>
-  {% endif %}
-
-  {% if member.links %}
-    <div class="member-card-links">
-      {% for link in member.links %}
-        {% assign key = link[0] %}
-        {% assign value = link[1] %}
-        {% include button.html type=key link=value style="bare" %}
-      {% endfor %}
-    </div>
   {% endif %}
 </div>

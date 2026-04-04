@@ -1,7 +1,7 @@
 ---
 date: 2000-02-03
 name: Ngoc-Minh Ngo
-description: Master student
+description: Master Student, NUS
 role: undergrad
 affiliation: National University of Singapore
 image: images/placeholder.jpg

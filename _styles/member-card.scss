@@ -1,0 +1,49 @@
+---
+---
+
+.member-card {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  width: 175px;
+  max-width: calc(100% - 20px - 20px);
+  text-decoration: none;
+}
+
+.member-card-image {
+  width: 100%;
+  margin-bottom: 15px;
+  aspect-ratio: 3 / 4;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+.member-card-name {
+  font-family: var(--heading);
+  font-weight: var(--semi-bold);
+  text-align: center;
+}
+
+.member-card-description {
+  color: var(--gray);
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.member-card-affiliation {
+  color: var(--gray);
+  font-size: 0.85em;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.member-card-links {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}

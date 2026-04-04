@@ -11,4 +11,4 @@ Our members are PhD students, postdocs, and early-career researchers at universi
 
 {% include section.html %}
 
-{% include list.html data="members" component="portrait" %}
+{% include list.html data="members" component="member-card" %}

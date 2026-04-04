@@ -1,0 +1,15 @@
+---
+name: Ngô Ngọc Minh
+description: Master student
+role: undergrad
+affiliation: National University of Singapore
+image: images/placeholder.jpg
+links:
+  email: minh.ngongoc2@gmail.com
+---
+
+Ngô Ngọc Minh is a master student at National University of Singapore.
+
+**Fields of interest:** Macroeconomics, Econometrics
+
+**Country:** Singapore

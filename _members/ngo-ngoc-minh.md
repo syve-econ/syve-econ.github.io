@@ -1,4 +1,5 @@
 ---
+date: 2000-02-03
 name: Ngoc-Minh Ngo
 description: Master student
 role: undergrad

@@ -1,4 +1,5 @@
 ---
+date: 2000-02-02
 name: Manh-Duc Doan
 description: Predoc/RA
 role: programmer

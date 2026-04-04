@@ -1,4 +1,5 @@
 ---
+date: 2000-02-06
 name: Nhat-Quang Phan
 description: Master student
 role: undergrad

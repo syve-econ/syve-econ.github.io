@@ -1,4 +1,5 @@
 ---
+date: 2000-02-05
 name: Van-Quy Nguyen
 description: Assistant Professor
 role: postdoc

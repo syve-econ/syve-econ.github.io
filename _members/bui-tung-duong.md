@@ -1,4 +1,5 @@
 ---
+date: 2000-02-01
 name: Tung-Duong Bui
 description: PhD student
 role: phd

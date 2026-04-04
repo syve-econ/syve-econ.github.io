@@ -1,7 +1,8 @@
 ---
+date: 2000-01-01
 name: Quang-Thanh Tran
 description: Postdoc
-role: postdoc
+role: pi
 affiliation: DEPOCEN
 image: images/placeholder.jpg
 links:

@@ -1,7 +1,8 @@
 ---
-name: Hai-Anh Tran
+date: 2000-01-02
+name: Anh Tran
 description: PhD student
-role: phd
+role: pi
 affiliation: Princeton University
 image: images/placeholder.jpg
 links:

@@ -7,9 +7,3 @@ image: images/placeholder.jpg
 links:
   email: tranhaianh14052000@gmail.com
 ---
-
-Tran Hai Anh is a phd student at Princeton University.
-
-**Fields of interest:** Labor, Education, IO, Public finance
-
-**Country:** USA

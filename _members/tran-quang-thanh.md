@@ -1,7 +1,7 @@
 ---
 date: 2000-01-01
 name: Quang-Thanh Tran
-description: Postdoc, NEU
+description: Postdoc, NEU (PhD Tohoku)
 role: pi
 affiliation: National Economics University
 image: images/quang-thanh-tran.jpg

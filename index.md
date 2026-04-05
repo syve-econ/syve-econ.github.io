@@ -59,9 +59,4 @@ The **Society of Young Vietnamese Economists (SYVE)** is a community of Vietname
 
 Latest updates from our community on Bluesky.
 
-<!-- BlueskyTimeline Widget -->
-<bst-widget data-handle="syve-econ.bsky.social" data-theme="light" data-width="420px" data-height="500px" data-lang="en" data-ui="0" data-pin="0" data-rp="0" data-thread="0" data-prof="0"></bst-widget>
-<script src="https://blueskytimeline.com/v2/timeline.js" type="module" defer></script>
-<!-- /BlueskyTimeline Widget -->
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
+<link rel="stylesheet" href="https://embedbsky.com/embedbsky.com-master-min.css" /><div id="embedbsky-com-timeline-embed" class="darkmode hasfooter"></div><script>let containerWidth=0,containerHeight=600;const getHtml=async t=>{const e=await fetch(t);return 200!==e.status?'<p><strong>No feed data could be located</p></strong>':e.text()};document.addEventListener('DOMContentLoaded',(async()=>{const t=(new Date).toISOString(),e=document.getElementById('embedbsky-com-timeline-embed');e.style.width="100%",e.style.height=`${containerHeight}px`;const n=await getHtml(`https://embedbsky.com/feeds/fade3dc34d080259d5a5a05cb326e0a992416015c7938ea3011fca4b6a8e57b5.html?v=${t}`);e.innerHTML=n}));</script>

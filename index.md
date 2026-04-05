@@ -67,7 +67,7 @@ We are building collaborative research groups across key areas of economics. Sta
 
 {%
   include button.html
-  link="research-groups"
+  link="research"
   text="Learn more"
   icon="fa-solid fa-arrow-right"
   flip=true
@@ -79,7 +79,7 @@ We are building collaborative research groups across key areas of economics. Sta
 {%
   include feature.html
   image="images/research_groups.jpg"
-  link="research-groups"
+  link="research"
   title="Research Groups"
   text=text
 %}

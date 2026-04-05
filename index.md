@@ -59,5 +59,6 @@ The **Society of Young Vietnamese Economists (SYVE)** is a community of Vietname
 
 Latest updates from our community on X.
 
-
-<a class="twitter-timeline" href="https://twitter.com/syve_econ?ref_src=twsrc%5Etfw">Tweets by syve_econ</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div align="center"><a class="twitter-timeline" data-width="600" data-dnt="true"  data-tweet-limit="4" data-theme="dark" href="https://twitter.com/syve_econ?ref_src=twsrc%5Etfw">Tweets by syve_econ</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>

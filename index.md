@@ -13,36 +13,45 @@ The **Society of Young Vietnamese Economists (SYVE)** is a community of Vietname
 
 ## What We Do
 
+<div class="cols" style="--cols: 3">
+
+<div>
+
 {%
-  include grid.html
-  content="
-  
-  {%
-    include card.html
-    image='images/reading_group.jpg'
-    link='reading-groups'
-    title='Reading Groups'
-    text='We organize weekly reading groups to present and discuss classic and seminal papers across various topics in economics, from microeconomics and game theory to development economics and econometrics.'
-  %}
-  
-  {%
-    include card.html
-    image='images/seminars.jpeg'
-    link='seminars'
-    title='Seminars'
-    text='Our seminars bring together early-career economists to present their research, exchange ideas, and receive feedback from peers across different fields of economics.'
-  %}
-  
-  {%
-    include card.html
-    image='images/research_groups.jpg'
-    link='research'
-    title='Research Groups'
-    text='We are building collaborative research groups across key areas of economics. Stay tuned for upcoming projects and opportunities to get involved.'
-  %}
-  
-  "
+  include card.html
+  image="images/reading_group.jpg"
+  link="reading-groups"
+  title="Reading Groups"
+  text="We organize weekly reading groups to present and discuss classic and seminal papers across various topics in economics, from microeconomics and game theory to development economics and econometrics."
 %}
+
+</div>
+
+<div>
+
+{%
+  include card.html
+  image="images/seminars.jpeg"
+  link="seminars"
+  title="Seminars"
+  text="Our seminars bring together early-career economists to present their research, exchange ideas, and receive feedback from peers across different fields of economics."
+%}
+
+</div>
+
+<div>
+
+{%
+  include card.html
+  image="images/research_groups.jpg"
+  link="research"
+  title="Research Groups"
+  text="We are building collaborative research groups across key areas of economics. Stay tuned for upcoming projects and opportunities to get involved."
+%}
+
+</div>
+
+</div>
 
 {% include section.html %}
 

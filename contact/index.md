@@ -11,7 +11,7 @@ SYVE welcomes Vietnamese economists at all stages of their early careers -- from
 
 Fill out the form below to register, or send us an email at **syve.info@gmail.com** with a brief introduction about yourself and your research interests.
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScmMzCpZtEc9C1iSW4uXYXKXZIqsQlFhWaQjuaC9bcMC3oxXA/viewform?embedded=true" width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0" style="border: none; max-width: 640px;">Loading…</iframe>
+[https://forms.gle/aAixsmcqyNXMVQFi8](https://forms.gle/aAixsmcqyNXMVQFi8)
 
 {% include section.html %}
 

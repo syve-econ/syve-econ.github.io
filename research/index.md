@@ -27,9 +27,7 @@ Below are publications by SYVE members, organized by year.
 ### {{ year_group.name }}
 
 {% for pub in year_group.items %}
-- **{{ pub.title }}** {% if pub.authors %}<span style="color: #666;">by {{ pub.authors }}</span>{% endif %}
-  {% if pub.journal %}<em>{{ pub.journal }}</em>{% endif %}
-  {% if pub.url %}[Link]({{ pub.url }}){% endif %}
+- **{{ pub.title }}**{% if pub.authors %} by {{ pub.authors }}{% endif %}{% if pub.journal %} in *{{ pub.journal }}*{% endif %}{% if pub.url %}. [View]({{ pub.url }}){% endif %}
 
 {% endfor %}
 {% endfor %}

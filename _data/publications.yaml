@@ -3,23 +3,53 @@
 # Required fields: title, year
 # Optional fields: authors, journal, url, doi
 
-- title: "Endowment-regarding preferences"
-  authors: "Van-Quy Nguyen"
-  journal: "Journal of Mathematical Economics"
-  year: 2021
-  url: "https://doi.org/10.1016/j.jmateco.2020.102454"
+- title: "Unveiling the path to the fourth industrial revolution: Exploring technology adoption and firm-level barriers"
+  authors: "Chinh Hoang-Duc, Kien Hoang-Le, et al."
+  journal: "Technological Forecasting and Social Change"
+  year: 2026
+  url: "https://sites.google.com/view/chinhhoang-duc/research?authuser=0"
 
-- title: "Sufficient conditions for a 'simple' decentralization with consumption externalities"
-  authors: "Del Mercato Elena, Van-Quy Nguyen"
-  journal: "Journal of Economic Theory"
-  year: 2023
-  url: "https://doi.org/10.1016/j.jet.2023.105637"
+- title: "Firm performance and industrial accumulation: The role of Industrial Parks"
+  authors: "Huy Le Vu, Tham Do Thi Hong, Quoc Viet Nguyen"
+  journal: "Thailand and The World Economy"
+  year: 2026
+  url: "https://so05.tci-thaijo.org/index.php/TER/article/view/274564/188684"
+
+- title: "Fertility and Career Choices in an Overlapping Generations Model with Sandwich Caregivers"
+  authors: "Quang-Thanh Tran"
+  journal: "Economic Modelling"
+  year: 2025
+  url: "doi.org/10.1016/j.econmod.2025.107262"
 
 - title: "Measuring the impact of COVID-19 and government policy responses on trade flow: the case of ASEAN countries"
-  authors: " Quoc Viet Nguyen, Thoan Thi Nguyen, Huy Le Vu, Tuong Vy Phan et al."
+  authors: "Quoc Viet Nguyen, Thoan Thi Nguyen, Huy Le Vu, Tuong Vy Phan et al."
   journal: "Journal of Economics and Development"
   year: 2025
   url: "https://www.emerald.com/jed/article-pdf/27/3/246/10190713/jed-08-2024-0302en.pdf"
+
+- title: "To Trust or not to Trust, That's the Question: The Impact of General Trust on Household Income in Rural Vietnam"
+  authors: "Ngoc Kien Do, Manh-Duc Doan, Cam Anh Pham"
+  journal: "WSEAS Transactions on Business and Economics"
+  year: 2025
+  url: "https://doi.org/10.37394/23207.2025.22.31"
+
+- title: "Give a Fish or Teach to Fish? Poverty Alleviation Effect of Government Support Policies and Self-Help Commercial Activities"
+  authors: "Chinh Hoang-Duc, Anh Nguyen-Thi, Huu Nguyen-Thu, et al."
+  journal: "The Journal of Development Studies"
+  year: 2024
+  url: "https://doi.org/10.1080/00220388.2024.2413082"
+
+- title: "Governmental support and multidimensional poverty alleviation: efficiency assessment in rural areas of Vietnam"
+  authors: "Chinh Hoang-Duc, Huu Nguyen-Thu, Anh Nguyen-Thi, et al."
+  journal: "The Journal of Economic Inequality"
+  year: 2024
+  url: "https://doi.org/10.1007/s10888-024-09620-1"
+
+- title: "Effects of Water Scarcity Awareness and Climate Change Belief on Recycled Water Usage Willingness: Evidence from New Mexico, United States"
+  authors: "M. H. Nguyen, Manh-Duc Doan, H. K. Dong, V. T. Nguyen, H. H. Dao, D. D. Trinh, et al."
+  journal: "The VMOST Journal of Social Sciences and Humanities"
+  year: 2024
+  url: "https://manhducdoan.github.io/research/"
 
 - title: "The Aging Tax on Potential Growth in Asia"
   authors: "Quang-Thanh Tran"
@@ -27,8 +57,32 @@
   year: 2022
   url: "doi.org/10.1016/j.asieco.2022.101495"
 
-- title: "Fertility and Career Choices in an Overlapping Generations Model with Sandwich Caregivers"
-  authors: "Quang-Thanh Tran"
-  journal: "Economic Modelling"
-  year: 2025
-  url: "doi.org/10.1016/j.econmod.2025.107262"
+- title: "Do intangible assets stimulate firm performance? Empirical evidence from Vietnamese agriculture, forestry and fishery small-and medium-sized enterprises"
+  authors: "Anh Nguyen-Thi, Chinh Hoang-Duc, Thuy Nguyen-Thi, et al."
+  journal: "Journal of Innovation & Knowledge"
+  year: 2022
+  url: "https://doi.org/10.1016/j.jik.2022.100194"
+
+- title: "Composite effects of human, natural and social capitals on sustainable food-crop farming in Sub-Saharan Africa"
+  authors: "Anh Nguyen-Thi, Chinh Hoang-Duc, Tiet Tran, Van Nguyen-Thi, The To-The"
+  journal: "Food Policy"
+  year: 2022
+  url: "https://doi.org/10.1016/j.foodpol.2022.102284"
+
+- title: "Drivers of land use efficiency among ethnic minority groups in Vietnam: a longitudinal study"
+  authors: "Anh Nguyen-Thi, Chinh Hoang-Duc, Ngoc Le-A, An Nguyen-An"
+  journal: "Journal of the Asia Pacific Economy"
+  year: 2022
+  url: "https://doi.org/10.1080/13547860.2022.2044658"
+
+- title: "Sufficient conditions for a 'simple' decentralization with consumption externalities"
+  authors: "Del Mercato Elena, Van-Quy Nguyen"
+  journal: "Journal of Economic Theory"
+  year: 2023
+  url: "https://doi.org/10.1016/j.jet.2023.105637"
+
+- title: "Endowment-regarding preferences"
+  authors: "Van-Quy Nguyen"
+  journal: "Journal of Mathematical Economics"
+  year: 2021
+  url: "https://doi.org/10.1016/j.jmateco.2020.102454"

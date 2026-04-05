@@ -22,10 +22,16 @@ We host research seminars where members present their ongoing work, share new fi
 
 ## Upcoming Seminars
 
-*Schedule coming soon.* If you are interested in presenting at our seminars, please [contact us](../contact).
+| Date | Presenter | Title | Affiliation |
+|------|-----------|-------|-------------|
+| TBD | | | |
+
+If you are interested in presenting at our seminars, please [contact us](../contact).
 
 {% include section.html %}
 
 ## Past Seminars
 
-*Archive coming soon.*
+| Date | Presenter | Title | Affiliation | Slides | Video |
+|------|-----------|-------|-------------|--------|-------|
+| 2026/03/21 | Giao Dang | The Impact of Abortion Access to Women's Family and Career Decisions | Western Ontario University | | [Video](https://www.youtube.com/watch?v=4HfskcWEh4c) |

@@ -45,7 +45,7 @@ The **Society of Young Vietnamese Economists (SYVE)** is a community of Vietname
   include card.html
   image="images/research_groups.jpg"
   link="research"
-  title="Research Groups"
+  title="Research"
   text="We are building collaborative research groups across key areas of economics. Stay tuned for upcoming projects and opportunities to get involved."
 %}
 
@@ -64,4 +64,3 @@ Latest updates from our community on Bluesky.
 <bst-widget data-handle="syve-econ.bsky.social" data-theme="light" data-width="420px" data-height="500px" data-lang="en" data-ui="0" data-pin="0" data-rp="0" data-thread="0" data-prof="0"></bst-widget>
 <script src="https://blueskytimeline.com/v2/timeline.js" type="module" defer></script>
 <!-- /BlueskyTimeline Widget -->
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

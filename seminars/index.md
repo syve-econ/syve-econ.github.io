@@ -7,16 +7,7 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-chalkboard-user" %}Seminars
 
-We host research seminars where members present their ongoing work, share new findings, and receive constructive feedback from peers across different fields of economics.
-
-{% include section.html %}
-
-## Format
-
-- Regular seminar sessions
-- Presentations of original research or work-in-progress
-- Q&A and discussion with the audience
-- Open to all SYVE members and invited guests
+We organize seminars to support and showcase the work of graduate students, postdoctoral researchers, and junior faculty presenting their recent work, job market papers, and more. The seminars focus on discussing advanced working papers and drafts related to all general interests in economics, including theoretical and empirical approaches, macro and micro econometrics, among others. Our goal is to provide a space for emerging scholars to receive feedback on their research from discussants while fostering intellectual exchange. We encourage submissions from early-career researchers, particularly those working on cutting-edge economic research. We welcome presentations from all SYVE members and invited guests.
 
 {% include section.html %}
 

@@ -15,7 +15,6 @@ We meet regularly to present and discuss classic and frontier papers on economic
 | Date | Paper | Presenter |
 |------|:------|-----------|
 | 2026/04/11 | Hsieh, Hurst, Jones, Klenow -- [The Allocation of Talent and U.S. Economic Growth](https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA11427) | Chinh Duc Hoang |
-| 2026/04/04 | Konig, Storesletten, Song, Zilibotti -- [Reconciling Models of Diffusion and Innovation: A Theory of the Productivity Distribution and Technology Frontier](https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA20080) | Hoang The-Nguyen |
 | TBD | Akcigit, Baslandze, Lotti -- [Connecting to Power: Political Connections, Innovation, and Firm Dynamics](https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA17408) | Manh-Duc Doan |
 
 {% include section.html %}
@@ -24,6 +23,7 @@ We meet regularly to present and discuss classic and frontier papers on economic
 
 | Date | Paper | Presenter | Slides | Video |
 |------|:------|-----------|--------|-------|
+| 2026/04/04 | Konig, Storesletten, Song, Zilibotti -- [Reconciling Models of Diffusion and Innovation: A Theory of the Productivity Distribution and Technology Frontier](https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA20080) | The-Hoang Nguyen | [Slides](DEPOCENReading_BPT_2021_ECTA.pdf) | [Video](https://youtu.be/4OZF5J2tRBs?si=wiiQyK2LPukcm27_) |
 | 2026/02/07 | Koenig -- [Technical Change and Superstar Effects](https://pubs.aeaweb.org/doi/pdfplus/10.1257/aeri.20210539) | Anh Tran | [Slides](koenig_tv_slide.pdf) | [Video](https://youtu.be/_W_RNfnp1OQ?si=BrgKHZtzuHMwqsMA) |
 | 2026/01/24 | Moll, Rachel, Restrepo -- [Uneven Growth: Automation's Impact on Income and Wealth Inequality](https://pascual.scripts.mit.edu/research/unevengrowth/) | Thanh Q. Tran | [Slides](UG_slides.pdf) | |
 | 2025/12/06 | Moscona and Sastry -- [Inappropriate Technology: Evidence from Global Agriculture](https://economics.mit.edu/sites/default/files/inline-files/IT_Final_Nov2022.pdf) | Anh Tran | [Slides](inapp_tech_slide.pdf) | [Video](https://youtu.be/8wx5fzgHfjg?si=VDqNg4-XGQuEAaYv) |

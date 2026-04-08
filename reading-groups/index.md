@@ -21,11 +21,11 @@ Covers the economics of growth, innovation, and technological change. Topics inc
 
 [View full reading list and materials](macro/){:.inline-button}
 
-### [Econometrics & Machine Learning](metrics/)
+### [Applied Microeconomics](micro/)
 
-Explores recent and emerging developments at the intersection of econometrics and machine learning. We discuss new estimation and inference methods, causal machine learning, high-dimensional techniques, and how advances in ML are reshaping empirical practice in economics.
+Covers topics in applied microeconomics, including labor economics, public economics, development economics, health economics, and the economics of education. We read both seminal and recent empirical papers that use modern causal inference methods to study important policy questions.
 
-[View full reading list and materials](metrics/){:.inline-button}
+[View full reading list and materials](micro/){:.inline-button}
 
 {% include section.html %}
 

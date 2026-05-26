@@ -15,7 +15,7 @@ Our reading groups cover a broad range of fields, from microeconomics and game t
 
 ## Current Reading Groups
 
-### [Growth & Innovation](macro/)
+### [Macroeconomics](macro/)
 
 Covers the economics of growth, innovation, and technological change. Topics include endogenous growth theory, directed technical change, firm dynamics, creative destruction, the allocation of talent, and the role of innovation policy. We read both foundational contributions and recent working papers from leading researchers in the field.
 

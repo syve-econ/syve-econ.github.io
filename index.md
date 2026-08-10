@@ -19,7 +19,7 @@ The next session for each of our reading groups and our seminar series. Material
 |--------|------|:--------------|-----------|
 | [Growth & Innovation](reading-groups/macro/) | TBD | Hsieh, Hurst, Jones, Klenow -- [The Allocation of Talent and U.S. Economic Growth](https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA11427) | Chinh Duc Hoang |
 | [Applied Microeconomics](reading-groups/micro/) | TBD | TBD | TBD |
-| [Geoeconomics](reading-groups/geoecon/) | TBD | TBD | TBD |
+| [Geoeconomics](reading-groups/geoecon/) | TBD | TBD | Hieu Nguyen (IMF) |
 | [Seminars](seminars/) | TBD | TBD | TBD |
 
 If you would like to present at a reading group or seminar, please [contact us](contact/).

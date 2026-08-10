@@ -6,7 +6,7 @@ title: Growth & Innovation
 
 We meet regularly to present and discuss classic and frontier papers on economic growth, innovation, and technological change. Each session is led by a presenter who walks through the paper and facilitates group discussion.
 
-**Full reading list & schedule**: [Link](https://docs.google.com/spreadsheets/d/1wBmGBDNjzm3XV-Swj0teQVn1tKtzSrRMLj9yhXPaq0M/edit?gid=0#gid=0)
+**Full reading list & schedule**: [Link](https://docs.google.com/spreadsheets/d/1pDDwv23suirZGCemUXgqgMIts5wMmtPrB17GXB6xc9I/edit?gid=0#gid=0)
 
 {% include section.html %}
 

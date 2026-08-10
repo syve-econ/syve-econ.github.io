@@ -6,6 +6,8 @@ title: Geoeconomics
 
 We meet regularly to present and discuss papers at the intersection of economics and geopolitics. Topics include trade and economic coercion, supply chain vulnerability and critical inputs, sanctions and export controls, industrial policy, and the geopolitics of the green transition. Each session is led by a presenter who walks through the paper and facilitates group discussion.
 
+**Full reading list & schedule**: [Link](https://docs.google.com/spreadsheets/d/1pDDwv23suirZGCemUXgqgMIts5wMmtPrB17GXB6xc9I/edit?gid=1094562378#gid=1094562378)
+
 {% include section.html %}
 
 ## Past Sessions

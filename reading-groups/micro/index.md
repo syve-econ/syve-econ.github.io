@@ -10,12 +10,4 @@ We meet regularly to present and discuss classic and frontier papers in applied 
 
 {% include section.html %}
 
-## Upcoming Sessions
-
-| Date | Paper | Presenter |
-|------|:------|-----------|
-| TBD | TBD | TBD |
-
-{% include section.html %}
-
 [Back to Reading Groups](../)

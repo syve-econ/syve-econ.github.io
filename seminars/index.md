@@ -13,18 +13,13 @@ Our goal is to provide a space for emerging scholars to receive feedback on thei
 
 {% include section.html %}
 
-## Upcoming Seminars
-
-| Date | Presenter | Title | Affiliation |
-|------|-----------|-------|-------------|
-| TBD | | | |
-
-If you are interested in presenting at our seminars, please [contact us](../contact).
-
-{% include section.html %}
-
 ## Past Seminars
 
 | Date | Presenter | Title | Affiliation | Slides | Video |
 |------|-----------|-------|-------------|--------|-------|
+| 2026/08/08 | Anh Tran | To Rent or Not to Rent? Supply-side Constraints and Matching Frictions in the Housing Choice Voucher Program | Princeton University | [Slides](slide_es_at.pdf) | [Video](https://www.youtube.com/watch?v=u3hcc1_1iHI) |
 | 2026/03/21 | Giao Dang | The Impact of Abortion Access to Women's Family and Career Decisions | Western Ontario University | | [Video](https://www.youtube.com/watch?v=4HfskcWEh4c) |
+
+{% include section.html %}
+
+The schedule for upcoming seminars is on the [home page](../). If you are interested in presenting at our seminars, please [contact us](../contact).

@@ -11,47 +11,18 @@ The **Society of Young Vietnamese Economists (SYVE)** is a community of Vietname
 
 {% include section.html %}
 
-## What We Do
+## Upcoming Schedule
 
-<div class="cols" style="--cols: 3">
+The next session for each of our reading groups and our seminar series. Materials from past sessions are on each group's own page.
 
-<div>
+| Series | Date | Paper / Title | Presenter |
+|--------|------|:--------------|-----------|
+| [Growth & Innovation](reading-groups/macro/) | TBD | Hsieh, Hurst, Jones, Klenow -- [The Allocation of Talent and U.S. Economic Growth](https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA11427) | Chinh Duc Hoang |
+| [Applied Microeconomics](reading-groups/micro/) | TBD | TBD | TBD |
+| [Geoeconomics](reading-groups/geoecon/) | TBD | TBD | TBD |
+| [Seminars](seminars/) | TBD | TBD | TBD |
 
-{%
-  include card.html
-  image="images/reading_group.jpg"
-  link="reading-groups"
-  title="Reading Groups"
-  text="We organize weekly reading groups to present and discuss classic and seminal papers across various topics in economics, from microeconomics and game theory to development economics and econometrics."
-%}
-
-</div>
-
-<div>
-
-{%
-  include card.html
-  image="images/seminars.jpeg"
-  link="seminars"
-  title="Seminars"
-  text="Our seminars bring together early-career economists to present their research, exchange ideas, and receive feedback from peers across different fields of economics."
-%}
-
-</div>
-
-<div>
-
-{%
-  include card.html
-  image="images/research_groups.jpg"
-  link="research"
-  title="Research"
-  text="We are building collaborative research groups across key areas of economics. Stay tuned for upcoming projects and opportunities to get involved."
-%}
-
-</div>
-
-</div>
+If you would like to present at a reading group or seminar, please [contact us](contact/).
 
 {% include section.html %}
 

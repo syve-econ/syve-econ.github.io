@@ -27,6 +27,12 @@ Covers topics in applied microeconomics, including labor economics, public econo
 
 [View full reading list and materials](micro/){:.inline-button}
 
+### [Geoeconomics](geoecon/)
+
+Covers the intersection of economics and geopolitics, including trade and economic coercion, supply chain vulnerability and critical inputs, sanctions and export controls, industrial policy, and the geopolitics of the green transition. We read recent working papers that combine quantitative trade and industrial organization methods with questions of strategic dependence between countries.
+
+[View full reading list and materials](geoecon/){:.inline-button}
+
 {% include section.html %}
 
-If you are interested in presenting or joining our reading groups, please [contact us](../contact).
+The schedule for upcoming sessions is on the [home page](../). If you are interested in presenting or joining our reading groups, please [contact us](../contact).

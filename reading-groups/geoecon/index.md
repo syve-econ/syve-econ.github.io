@@ -12,7 +12,7 @@ We meet regularly to present and discuss papers at the intersection of economics
 
 | Date | Paper | Presenter | Slides | Video |
 |------|:------|-----------|--------|-------|
-| 2026/08/08 | Domínguez-Iino, Elliott, Hsiao -- [Critical Minerals, Geopolitics, and the Green Transition](https://allanhsiao.com/files/DEH_minerals.pdf) | Hung D. Hoang | [Slides](DEH_2026_ReadingGroup.pdf) | |
+| 2026/08/08 | Domínguez-Iino, Elliott, Hsiao -- [Critical Minerals, Geopolitics, and the Green Transition](https://allanhsiao.com/files/DEH_minerals.pdf) | Hung D. Hoang | [Slides](DEH_2026_ReadingGroup.pdf) | [Video](https://www.youtube.com/watch?v=H8H7XaOmQ-Q) |
 
 {% include section.html %}
 

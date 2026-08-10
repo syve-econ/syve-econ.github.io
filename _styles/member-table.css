@@ -1,0 +1,18 @@
+/* members directory table */
+.member-table {
+  width: 100%;
+}
+
+.member-table th,
+.member-table td {
+  text-align: left;
+}
+
+/* keep names and links on one line, let the wide columns wrap */
+.member-table td:first-child,
+.member-table td:last-child {
+  overflow-wrap: normal;
+  white-space: nowrap;
+}
+
+/*# sourceMappingURL=member-table.css.map */

@@ -1,10 +1,11 @@
 ---
-date: 2000-02-01
 name: Giao Dang
-description: PhD Student, WesternU
+description: "PhD Student, University of Western Ontario"
 role: phd
-affiliation: University of Western Ontario, Canada
+order: 5
+position: PhD Student
+affiliation: University of Western Ontario
+country: Canada
+fields: 
 image: images/placeholder.jpg
-links:
-  email: 
 ---

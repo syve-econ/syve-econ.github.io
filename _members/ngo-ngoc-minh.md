@@ -1,10 +1,12 @@
 ---
-date: 2000-02-03
-name: Ngoc-Minh Ngo
-description: Master Student, NUS
+name: "Ngoc-Minh Ngo"
+description: "Master Student, National University of Singapore"
 role: undergrad
+order: 12
+position: Master Student
 affiliation: National University of Singapore
+country: Singapore
+fields: "Macroeconomics, Econometrics"
 image: images/placeholder.jpg
-links:
-  email: minh.ngongoc2@gmail.com
+email: minh.ngongoc2@gmail.com
 ---

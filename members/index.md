@@ -11,5 +11,33 @@ Our members are PhD students, postdocs, and early-career researchers at universi
 
 {% include section.html %}
 
-{% include list.html data="members" component="member-card" filter="role == 'pi'" %}
-{% include list.html data="members" component="member-card" filter="role != 'pi'" %}
+## Member Directory
+
+{% assign members = site.members | sort: "order" %}
+
+<table class="member-table">
+<thead>
+<tr>
+<th>Name</th>
+<th>Position</th>
+<th>Affiliation</th>
+<th>Research Interests</th>
+<th>Site</th>
+</tr>
+</thead>
+<tbody>
+{%- for member in members %}
+<tr>
+<td>{% if member.email %}<a href="mailto:{{ member.email }}">{{ member.name }}</a>{% else %}{{ member.name }}{% endif %}</td>
+<td>{{ member.position }}</td>
+<td>{{ member.affiliation }}</td>
+<td>{{ member.fields }}</td>
+<td>{% if member.link %}<a href="{{ member.link }}">Link</a>{% endif %}</td>
+</tr>
+{%- endfor %}
+</tbody>
+</table>
+
+{% include section.html %}
+
+To join SYVE or to update your details in this directory, please [contact us](../contact).

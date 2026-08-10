@@ -1,11 +1,15 @@
 ---
-date: 2000-02-05
-name: Van-Quy Nguyen
-description: Assistant Professor, NEU (PhD Paris 1)
+name: "Van-Quy Nguyen"
+description: "Assistant Professor, National Economics University"
 role: postdoc
+order: 1
+position: Assistant Professor
 affiliation: National Economics University
+country: Vietnam
+fields: "Microeconomics, Macroeconomics, Game Theory"
 image: images/placeholder.jpg
 link: https://sites.google.com/view/vanquy93/home?authuser=0
+email: nguyenvanquy0301@gmail.com
 links:
-  email: nguyenvanquy0301@gmail.com
+  home-page: "https://sites.google.com/view/vanquy93/home?authuser=0"
 ---

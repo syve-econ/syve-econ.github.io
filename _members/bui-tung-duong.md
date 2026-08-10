@@ -1,10 +1,15 @@
 ---
-date: 2000-02-01
-name: Tung-Duong Bui
-description: PhD Student, WesternU
+name: "Tung-Duong Bui"
+description: "PhD Student, University of Western Ontario"
 role: phd
-affiliation: University of Western Ontario, Canada
+order: 10
+position: PhD Student
+affiliation: University of Western Ontario
+country: Canada
+fields: "Labor, Development"
 image: images/placeholder.jpg
+link: https://facebook.com/duong.tung.bui.7976
+email: tungduongbui167@gmail.com
 links:
-  email: tungduongbui167@gmail.com
+  facebook: duong.tung.bui.7976
 ---

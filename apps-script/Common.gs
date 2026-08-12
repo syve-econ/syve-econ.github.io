@@ -24,11 +24,29 @@ function getHeaderMap_(sheet) {
 }
 
 /**
+ * Resolves a logical field to a 1-based column index.
+ *
+ * `names` is the list of accepted header spellings from CONFIG.HEADERS; the
+ * first one present on the sheet wins. This is what lets Applied Micro call its
+ * paper column "Paper" while the other tabs call it "Title".
+ *
+ * Returns 0 when the sheet has none of them.
+ */
+function resolveCol_(headerMap, names) {
+  const candidates = Array.isArray(names) ? names : [names];
+  for (let i = 0; i < candidates.length; i++) {
+    const col = headerMap[String(candidates[i]).trim().toLowerCase()];
+    if (col) return col;
+  }
+  return 0;
+}
+
+/**
  * Picks one field out of an already-read row of values.
  * `values` is 0-indexed; the header map is 1-indexed.
  */
-function pickField_(headerMap, values, headerName) {
-  const col = headerMap[String(headerName).trim().toLowerCase()];
+function pickField_(headerMap, values, names) {
+  const col = resolveCol_(headerMap, names);
   if (!col) return '';
   const value = values[col - 1];
   return value === undefined ? '' : value;
@@ -108,6 +126,8 @@ function rowFromValues_(sheetName, rowNumber, headerMap, values) {
     title: formatValue_(pick(h.title)),
     type: formatValue_(pick(h.type)),
     fields: formatValue_(pick(h.fields)),
+    methodology: formatValue_(pick(h.methodology)),
+    topic: formatValue_(pick(h.topic)),
     presenter: formatValue_(pick(h.presenter)),
     status: formatValue_(pick(h.status)),
     date: formatValue_(pick(h.date), 'date'),

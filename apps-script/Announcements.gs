@@ -112,6 +112,7 @@ function buildAnnouncementHtml_(sessions) {
         detailRow_('Authors', s.authors) +
         detailRow_('Date & time', when) +
         detailRow_('Fields', s.fields) +
+        detailRow_('Topic', s.topic) +
         detailRow_('Paper link', s.link, true) +
         detailRow_('Slides', s.slides, true) +
         '</table>' +

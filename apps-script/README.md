@@ -49,16 +49,28 @@ installable trigger, which runs with full authorization.
   | gid | Tab | Used by the script |
   |-----|-----|--------------------|
   | 0 | `Innovation & growth` | yes |
-  | 1897452861 | `Applied Micro` | no - reading list, not a schedule |
+  | 1897452861 | `Applied Micro` | yes |
   | 1094562378 | `Geoeconomics` | yes |
   | 768851018 | `WP seminars` | yes |
 
-- The three schedule tabs do **not** have identical columns. `WP seminars` has
-  an extra `Fields` column, which shifts everything after it. This is fine:
-  columns are matched by header text, never by position.
-- Required on every schedule tab: `Authors`, `Title`, `Presenter`, `Status`,
-  `Date`. Everything else (`Type`, `Fields`, `Time`, `Slides`, `Link`,
-  `Recordings`) is optional and simply omitted from emails when absent.
+- The four schedule tabs do **not** have identical columns, and none of this
+  matters to the script, which matches columns by header text and never by
+  position:
+
+  | Tab | Notable differences |
+  |-----|---------------------|
+  | `Innovation & growth` | the baseline shape |
+  | `Applied Micro` | no `Authors`; the paper is `Paper`, not `Title`; adds `Methodology`, `Level`, `Topic` before it |
+  | `Geoeconomics` | same as the baseline |
+  | `WP seminars` | extra `Fields` column, which shifts everything after it |
+
+- Required on every schedule tab: `Title` (or `Paper`), `Presenter`, `Status`,
+  `Date`. Everything else is optional and simply omitted from emails when
+  absent. `Authors` is optional precisely because Applied Micro has none.
+- A field can accept several header spellings. `CONFIG.HEADERS` maps each
+  logical field to a list of accepted names, first match wins - that is how
+  `Paper` and `Title` both work. Add a spelling to the list rather than
+  renaming a column in the sheet.
 
 ## Zoom details
 

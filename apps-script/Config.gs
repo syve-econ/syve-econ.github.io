@@ -18,7 +18,12 @@ const CONFIG = {
    * intentionally absent: it is a topic reading list, not a session schedule,
    * so it has none of the columns below.
    */
-  SCHEDULE_SHEETS: ['Innovation & growth', 'Geoeconomics', 'WP seminars'],
+  SCHEDULE_SHEETS: [
+    'Innovation & growth',
+    'Applied Micro',
+    'Geoeconomics',
+    'WP seminars',
+  ],
 
   /**
    * Column headers used on the schedule tabs (row 1). Columns are looked up by
@@ -30,24 +35,29 @@ const CONFIG = {
    * so it starts working automatically if it is added back.
    */
   HEADERS: {
-    authors: 'Authors',
-    title: 'Title',
-    type: 'Type',
-    fields: 'Fields',
-    presenter: 'Presenter',
-    status: 'Status',
-    date: 'Date',
-    slides: 'Slides',
-    time: 'Time',
-    recordings: 'Recordings',
-    link: 'Link',
+    authors: ['Authors'],
+    // Applied Micro calls the paper column "Paper"; the others use "Title".
+    title: ['Title', 'Paper'],
+    type: ['Type'],
+    fields: ['Fields'],
+    methodology: ['Methodology'],
+    topic: ['Topic'],
+    presenter: ['Presenter'],
+    status: ['Status'],
+    date: ['Date'],
+    slides: ['Slides'],
+    time: ['Time'],
+    recordings: ['Recordings'],
+    link: ['Link'],
   },
 
   /**
    * Columns every schedule tab must have. Anything in HEADERS but not here is
    * optional, and "Check setup" will not report it as a problem when absent.
+   *
+   * Authors is NOT required: Applied Micro has no such column.
    */
-  REQUIRED_HEADERS: ['authors', 'title', 'presenter', 'status', 'date'],
+  REQUIRED_HEADERS: ['title', 'presenter', 'status', 'date'],
 
   /**
    * Editing the Status cell to one of these values sends the notification.

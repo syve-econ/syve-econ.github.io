@@ -18,7 +18,7 @@ function onEditInstallable(e) {
 
     // Only react to the Status column.
     const headerMap = getHeaderMap_(sheet);
-    const statusCol = headerMap[CONFIG.HEADERS.status.trim().toLowerCase()];
+    const statusCol = resolveCol_(headerMap, CONFIG.HEADERS.status);
     if (!statusCol) return;
     if (e.range.getColumn() !== statusCol) return;
 
@@ -72,6 +72,8 @@ function sendRegistrationEmail_(data, editorEmail) {
     detailRow_('Date & time', when) +
     detailRow_('Type', data.type) +
     detailRow_('Fields', data.fields) +
+    detailRow_('Methodology', data.methodology) +
+    detailRow_('Topic', data.topic) +
     detailRow_('Status', data.status) +
     detailRow_('Paper link', data.link, true) +
     detailRow_('Registered by', editorEmail) +
@@ -113,6 +115,8 @@ function plainTextFallback_(data, when, editorEmail) {
     'Date & time: ' + when,
     'Type:        ' + (data.type || '-'),
     'Fields:      ' + (data.fields || '-'),
+    'Methodology: ' + (data.methodology || '-'),
+    'Topic:       ' + (data.topic || '-'),
     'Status:      ' + (data.status || '-'),
     'Paper link:  ' + (data.link || '-'),
     'Registered by: ' + (editorEmail || '-'),

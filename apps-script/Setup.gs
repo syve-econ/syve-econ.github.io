@@ -58,7 +58,7 @@ function installStatusDropdown() {
     if (!sheet) return;
 
     const headerMap = getHeaderMap_(sheet);
-    const statusCol = headerMap[CONFIG.HEADERS.status.trim().toLowerCase()];
+    const statusCol = resolveCol_(headerMap, CONFIG.HEADERS.status);
     if (!statusCol) return;
 
     const numRows = Math.max(sheet.getMaxRows() - CONFIG.HEADER_ROW, 1);
@@ -132,7 +132,7 @@ function checkSetup() {
     }
     const headerMap = getHeaderMap_(sheet);
     const missing = CONFIG.REQUIRED_HEADERS.filter(function (key) {
-      return !headerMap[CONFIG.HEADERS[key].trim().toLowerCase()];
+      return !resolveCol_(headerMap, CONFIG.HEADERS[key]);
     });
     lines.push(
       missing.length

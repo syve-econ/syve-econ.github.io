@@ -58,7 +58,7 @@ function sendRegistrationEmail_(data, editorEmail) {
   const subject =
     '[SYVE] ' + data.sheetName + ': ' + who + ' registered - ' + what;
 
-  const when = [data.date, data.time].filter(Boolean).join(' at ') || 'TBD';
+  const when = formatWhen_(data.date, data.time);
 
   const html =
     '<div style="font-family:Helvetica,Arial,sans-serif;font-size:14px;' +

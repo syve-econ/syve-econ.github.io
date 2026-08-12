@@ -180,6 +180,31 @@ function readAllScheduleRows_(sheet) {
 }
 
 /**
+ * Renders a date and time for display, falling back to TBD for whichever part
+ * has not been filled in yet.
+ *
+ *   both        -> "2026/09/12 at 20:00"
+ *   date only   -> "2026/09/12 at TBD"
+ *   time only   -> "TBD at 20:00"
+ *   neither     -> "TBD"
+ */
+function formatWhen_(date, time) {
+  if (!date && !time) return CONFIG.TBD_LABEL;
+  return (
+    (date || CONFIG.TBD_LABEL) + ' at ' + (time || CONFIG.TBD_LABEL)
+  );
+}
+
+/** True if the status means the session is over or called off. */
+function isFinishedStatus_(status) {
+  const needle = String(status || '').trim().toLowerCase();
+  if (!needle) return false;
+  return CONFIG.FINISHED_STATUSES.some(function (s) {
+    return s.toLowerCase() === needle;
+  });
+}
+
+/**
  * The no-reply footer, defined once so every outgoing email carries the same
  * wording.
  */

@@ -53,7 +53,11 @@ function getMemberRecipients_() {
 
 /**
  * Collects upcoming sessions across all schedule tabs.
- * "Upcoming" means the Date cell is today or later.
+ *
+ * A row counts as upcoming when it has a presenter, its status is not
+ * Presented or Cancelled, and its date is either today or later, or not filled
+ * in yet. Undated sessions are announced with their date shown as TBD rather
+ * than being left out, so a registration is visible before a slot is agreed.
  */
 function getUpcomingSessions_() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
@@ -67,18 +71,25 @@ function getUpcomingSessions_() {
     if (!sheet) return;
 
     readAllScheduleRows_(sheet).forEach(function (data) {
-      // A row with no readable date is not a scheduled session yet.
-      if (!data.dateValue || data.dateValue < today) return;
-      // Skip rows that are only a paper suggestion with nobody attached.
-      if (!data.presenter && !data.title) return;
+      // Somebody has to be presenting; the rest of the tab is a paper backlog.
+      if (!data.presenter) return;
+      // Already happened or called off.
+      if (isFinishedStatus_(data.status)) return;
+      // Dated in the past. A row with no date yet is still upcoming, and is
+      // announced with its date shown as TBD.
+      if (data.dateValue && data.dateValue < today) return;
 
-      data.sortKey = data.dateValue.getTime();
       sessions.push(data);
     });
   });
 
+  // Dated sessions first, in date order; undated ones last, since there is no
+  // meaningful place to put them in the sequence.
   sessions.sort(function (a, b) {
-    return a.sortKey - b.sortKey;
+    if (a.dateValue && b.dateValue) return a.dateValue - b.dateValue;
+    if (a.dateValue) return -1;
+    if (b.dateValue) return 1;
+    return 0;
   });
   return sessions;
 }
@@ -88,7 +99,7 @@ function buildAnnouncementHtml_(sessions) {
   if (!sessions.length) {
     return (
       '<div style="font-family:Helvetica,Arial,sans-serif;font-size:14px;">' +
-      '<p>There are no upcoming sessions with a date on the schedule yet.</p>' +
+      '<p>There are no upcoming sessions on the schedule yet.</p>' +
       footerHtml_() +
       '</div>'
     );
@@ -96,7 +107,7 @@ function buildAnnouncementHtml_(sessions) {
 
   const blocks = sessions
     .map(function (s) {
-      const when = [s.date, s.time].filter(Boolean).join(' at ') || 'TBD';
+      const when = formatWhen_(s.date, s.time);
       return (
         '<div style="margin:0 0 24px 0;padding:0 0 16px 0;' +
         'border-bottom:1px solid #eee;">' +

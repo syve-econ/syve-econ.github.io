@@ -11,7 +11,7 @@ const CONFIG = {
    * confirm the Apps Script project is running the version you think it is
    * after re-pasting.
    */
-  VERSION: '2026-08-12f',
+  VERSION: '2026-08-12g',
 
   /**
    * Organizers who receive registration notifications and announcement
@@ -86,14 +86,24 @@ const CONFIG = {
    * Compared case-insensitively. Run installStatusDropdown() to add these as a
    * dropdown on the Status column.
    */
-  TRIGGER_STATUSES: ['Registered', 'Scheduled'],
+  TRIGGER_STATUSES: ['Registered'],
 
   /**
    * Full set of values offered by the Status dropdown.
    * "Preparing" and "Presented" are already in use in the workbook and are
    * kept so existing rows stay valid.
    */
-  ALL_STATUSES: ['Registered', 'Preparing', 'Scheduled', 'Presented', 'Cancelled'],
+  ALL_STATUSES: ['Registered', 'Preparing', 'Presented', 'Cancelled'],
+
+  /**
+   * Statuses that mean a session is over or called off, so it is left out of
+   * announcements no matter what its date says. Everything else with a
+   * presenter counts as upcoming.
+   */
+  FINISHED_STATUSES: ['Presented', 'Cancelled'],
+
+  /** Shown wherever a date or time has not been filled in yet. */
+  TBD_LABEL: 'TBD',
 
   /** Row 1 is the header row; data starts on row 2. */
   HEADER_ROW: 1,

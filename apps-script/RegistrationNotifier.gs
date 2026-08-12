@@ -87,7 +87,7 @@ function sendRegistrationEmail_(data, editorEmail) {
     '</div>';
 
   MailApp.sendEmail({
-    to: CONFIG.NOTIFY_EMAIL,
+    to: notifyRecipients_(),
     subject: subject,
     htmlBody: html,
     body: plainTextFallback_(data, when, editorEmail),
@@ -146,5 +146,9 @@ function testRegistrationEmailForSelectedRow() {
   }
 
   sendRegistrationEmail_(readScheduleRow_(sheet, row), Session.getActiveUser().getEmail());
-  ui.alert('Test notification sent to ' + CONFIG.NOTIFY_EMAIL + '.');
+  ui.alert(
+    'Test notification sent',
+    'Sent to:\n' + CONFIG.NOTIFY_EMAILS.join('\n'),
+    ui.ButtonSet.OK
+  );
 }

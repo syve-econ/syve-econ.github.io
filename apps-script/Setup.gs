@@ -38,7 +38,8 @@ function installTriggers() {
 
   SpreadsheetApp.getUi().alert(
     'Trigger installed',
-    'Registration notifications will now be sent to ' + CONFIG.NOTIFY_EMAIL + '.',
+    'Registration notifications will now be sent to:\n' +
+      CONFIG.NOTIFY_EMAILS.join('\n'),
     SpreadsheetApp.getUi().ButtonSet.OK
   );
 }

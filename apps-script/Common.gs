@@ -179,6 +179,34 @@ function readAllScheduleRows_(sheet) {
   return rows;
 }
 
+/** Basic shape check, enough to keep malformed cells out of a recipient list. */
+function isValidEmail_(email) {
+  return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(String(email).trim());
+}
+
+/**
+ * The organizer addresses, as the comma-separated string MailApp expects.
+ * Blank and duplicate entries are dropped so a stray edit to CONFIG cannot
+ * produce an invalid recipient list.
+ */
+function notifyRecipients_(extraEmails) {
+  const all = CONFIG.NOTIFY_EMAILS.concat(extraEmails || []);
+  const seen = {};
+  const clean = [];
+
+  all.forEach(function (email) {
+    const trimmed = String(email || '').trim();
+    if (!isValidEmail_(trimmed)) return;
+
+    const key = trimmed.toLowerCase();
+    if (seen[key]) return;
+    seen[key] = true;
+    clean.push(trimmed);
+  });
+
+  return clean.join(',');
+}
+
 /**
  * Reads the Zoom details from Script Properties.
  * Returns {link, meetingId, passcode}; any unset value comes back as ''.

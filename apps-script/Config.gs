@@ -6,8 +6,15 @@
  */
 
 const CONFIG = {
-  /** Where registration notifications are sent. */
-  NOTIFY_EMAIL: 'syve.info@gmail.com',
+  /**
+   * Organizers who receive registration notifications and announcement
+   * previews. Add or remove addresses here; everything else follows.
+   */
+  NOTIFY_EMAILS: [
+    'syve.info@gmail.com',
+    'quangthanhtran.econ@gmail.com',
+    'manhduc.doan03@gmail.com',
+  ],
 
   /** Shown as the sender name on outgoing mail. */
   SENDER_NAME: 'SYVE Schedule Bot',

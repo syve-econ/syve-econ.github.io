@@ -51,10 +51,6 @@ function getMemberRecipients_() {
   return recipients;
 }
 
-function isValidEmail_(email) {
-  return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(String(email).trim());
-}
-
 /**
  * Collects upcoming sessions across all schedule tabs.
  * "Upcoming" means the Date cell is today or later.
@@ -161,19 +157,24 @@ function buildZoomBlock_() {
   );
 }
 
-/** Sends the announcement to yourself only, so you can check it before sending. */
+/**
+ * Sends the announcement to the organizers only, so it can be checked before
+ * it goes to the membership. Whoever runs it is included even if they are not
+ * in CONFIG.NOTIFY_EMAILS, so the preview never lands somewhere they cannot see.
+ */
 function previewAnnouncement() {
   const ui = SpreadsheetApp.getUi();
   const sessions = getUpcomingSessions_();
   const recipients = getMemberRecipients_();
   const me = Session.getActiveUser().getEmail();
+  const to = notifyRecipients_([me]);
 
   MailApp.sendEmail({
-    to: me,
+    to: to,
     subject: '[PREVIEW] SYVE upcoming schedule',
     htmlBody:
       '<p style="background:#fff3cd;padding:8px;border:1px solid #ffe08a;">' +
-      'Preview only. If sent for real this would go to <strong>' +
+      'Preview only, sent to the organizers. If sent for real this would go to <strong>' +
       recipients.length +
       '</strong> members.</p>' +
       buildAnnouncementHtml_(sessions),
@@ -182,11 +183,11 @@ function previewAnnouncement() {
 
   ui.alert(
     'Preview sent',
-    'A preview went to ' +
-      me +
-      '.\n\nSessions included: ' +
+    'Sent to:\n' +
+      to.split(',').join('\n') +
+      '\n\nSessions included: ' +
       sessions.length +
-      '\nMembers who would receive it: ' +
+      '\nMembers who would receive the real send: ' +
       recipients.length,
     ui.ButtonSet.OK
   );

@@ -44,8 +44,12 @@ const CONFIG = {
    */
   TRIGGER_STATUSES: ['Registered', 'Scheduled'],
 
-  /** Full set of values offered by the Status dropdown. */
-  ALL_STATUSES: ['Registered', 'Scheduled', 'Presented', 'Cancelled'],
+  /**
+   * Full set of values offered by the Status dropdown.
+   * "Preparing" and "Presented" are already in use in the workbook and are
+   * kept so existing rows stay valid.
+   */
+  ALL_STATUSES: ['Registered', 'Preparing', 'Scheduled', 'Presented', 'Cancelled'],
 
   /** Row 1 is the header row; data starts on row 2. */
   HEADER_ROW: 1,

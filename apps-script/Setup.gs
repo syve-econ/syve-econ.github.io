@@ -14,6 +14,7 @@ function onOpen() {
     .addItem('Install / repair triggers', 'installTriggers')
     .addItem('Add Status dropdown to schedule tabs', 'installStatusDropdown')
     .addItem('Set Zoom details', 'setZoomDetails')
+    .addItem('Format dates as dd/mm/yyyy', 'formatDatesDayFirst')
     .addItem('Check setup', 'checkSetup')
     .addToUi();
 }
@@ -115,6 +116,78 @@ function setZoomDetails() {
       '\nMeeting ID: ' + (saved.meetingId || '(not set)') +
       '\nPasscode:   ' + (saved.passcode || '(not set)') +
       '\n\nThese appear in announcement emails only.',
+    ui.ButtonSet.OK
+  );
+}
+
+/**
+ * Displays the Date column of every schedule tab as dd/mm/yyyy.
+ *
+ * This changes presentation only; the underlying date values are untouched, so
+ * nothing that already works can break.
+ *
+ * It also offers to switch the spreadsheet locale to United Kingdom. That
+ * matters: the number format controls how a date is SHOWN, while the locale
+ * controls how a typed date is READ. Change only the format and the sheet
+ * displays 05/06/2026 day-first while still interpreting what you type
+ * month-first, which is worse than either setting alone.
+ */
+function formatDatesDayFirst() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const ui = SpreadsheetApp.getUi();
+  const done = [];
+  const skipped = [];
+
+  CONFIG.SCHEDULE_SHEETS.forEach(function (name) {
+    const sheet = ss.getSheetByName(name);
+    if (!sheet) {
+      skipped.push(name + ' (tab not found)');
+      return;
+    }
+
+    const dateCol = resolveCol_(getHeaderMap_(sheet), CONFIG.HEADERS.date);
+    if (!dateCol) {
+      skipped.push(name + ' (no Date column)');
+      return;
+    }
+
+    const numRows = Math.max(sheet.getMaxRows() - CONFIG.HEADER_ROW, 1);
+    sheet
+      .getRange(CONFIG.HEADER_ROW + 1, dateCol, numRows, 1)
+      .setNumberFormat(CONFIG.SHEET_DATE_FORMAT);
+    done.push(name);
+  });
+
+  const locale = ss.getSpreadsheetLocale();
+  let localeNote = 'Spreadsheet locale: ' + locale;
+
+  if (locale !== 'en_GB') {
+    const answer = ui.alert(
+      'Also read typed dates day-first?',
+      'The Date columns now DISPLAY as dd/mm/yyyy.\n\n' +
+        'The spreadsheet locale is still ' + locale + ', so a date typed as\n' +
+        '05/06/2026 may be read as 6 May rather than 5 June.\n\n' +
+        'Switch the locale to United Kingdom so typing matches the display?\n' +
+        '(This can affect number and currency formatting too.)',
+      ui.ButtonSet.YES_NO
+    );
+    if (answer === ui.Button.YES) {
+      ss.setSpreadsheetLocale('en_GB');
+      localeNote = 'Spreadsheet locale changed to en_GB.';
+    } else {
+      localeNote =
+        'Locale left as ' + locale + '. Type dates as dd/mm/yyyy with care, ' +
+        'or enter them from the date picker.';
+    }
+  }
+
+  ui.alert(
+    'Date format updated',
+    'Set to ' + CONFIG.SHEET_DATE_FORMAT + ' on:\n  ' +
+      (done.length ? done.join('\n  ') : '(none)') +
+      (skipped.length ? '\n\nSkipped:\n  ' + skipped.join('\n  ') : '') +
+      '\n\n' + localeNote +
+      '\n\nEmails use ' + CONFIG.DATE_FORMAT + ' to match.',
     ui.ButtonSet.OK
   );
 }

@@ -63,12 +63,39 @@ function toDate_(value) {
   const text = String(value === undefined || value === null ? '' : value).trim();
   if (!text) return null;
 
-  // Accept yyyy/mm/dd and yyyy-mm-dd, the formats used in this workbook.
-  const m = text.match(/^(\d{4})[/-](\d{1,2})[/-](\d{1,2})$/);
-  if (!m) return null;
+  // Year first: 2026/09/12 or 2026-09-12.
+  const iso = text.match(/^(\d{4})[/-](\d{1,2})[/-](\d{1,2})$/);
+  if (iso) {
+    return validDate_(Number(iso[1]), Number(iso[2]), Number(iso[3]));
+  }
 
-  const parsed = new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
-  return isNaN(parsed.getTime()) ? null : parsed;
+  // Year last: read as DAY first, matching CONFIG.SHEET_DATE_FORMAT.
+  // 05/06/2026 is 5 June, not 6 May.
+  const dayFirst = text.match(/^(\d{1,2})[/-](\d{1,2})[/-](\d{4})$/);
+  if (dayFirst) {
+    return validDate_(Number(dayFirst[3]), Number(dayFirst[2]), Number(dayFirst[1]));
+  }
+
+  return null;
+}
+
+/**
+ * Builds a Date from parts, rejecting values that JavaScript would silently
+ * roll over (month 13, 31 February, and so on).
+ */
+function validDate_(year, month, day) {
+  if (month < 1 || month > 12 || day < 1 || day > 31) return null;
+
+  const parsed = new Date(year, month - 1, day);
+  if (isNaN(parsed.getTime())) return null;
+  if (
+    parsed.getFullYear() !== year ||
+    parsed.getMonth() !== month - 1 ||
+    parsed.getDate() !== day
+  ) {
+    return null;
+  }
+  return parsed;
 }
 
 /**
@@ -79,7 +106,8 @@ function formatValue_(value, kind) {
   if (value === null || value === undefined || value === '') return '';
 
   if (Object.prototype.toString.call(value) === '[object Date]') {
-    const pattern = kind === 'time' ? 'HH:mm' : 'yyyy/MM/dd';
+    const pattern =
+      kind === 'time' ? CONFIG.TIME_FORMAT : CONFIG.DATE_FORMAT;
     return Utilities.formatDate(value, CONFIG.TIMEZONE, pattern);
   }
 

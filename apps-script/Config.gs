@@ -11,7 +11,7 @@ const CONFIG = {
    * confirm the Apps Script project is running the version you think it is
    * after re-pasting.
    */
-  VERSION: '2026-08-12g',
+  VERSION: '2026-08-12h',
 
   /**
    * Organizers who receive registration notifications and announcement
@@ -135,4 +135,13 @@ const CONFIG = {
 
   /** Timezone used to format dates in emails. */
   TIMEZONE: 'Asia/Ho_Chi_Minh',
+
+  /** How dates are written in emails. Java-style pattern, as Utilities wants. */
+  DATE_FORMAT: 'dd/MM/yyyy',
+
+  /** How the Date column is displayed in the sheet. Sheets-style pattern. */
+  SHEET_DATE_FORMAT: 'dd/mm/yyyy',
+
+  /** How times are written in emails. */
+  TIME_FORMAT: 'HH:mm',
 };

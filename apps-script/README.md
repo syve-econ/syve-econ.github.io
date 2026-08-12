@@ -44,8 +44,18 @@ installable trigger, which runs with full authorization.
 ## Configuration notes
 
 - `SCHEDULE_SHEETS` must match your tab names **exactly**. Update it if you
-  rename a tab. The current values assume `Growth & Innovation`, `Geoeconomics`
-  and `Seminars`.
+  rename a tab. Current tabs in the workbook:
+
+  | gid | Tab | Used by the script |
+  |-----|-----|--------------------|
+  | 0 | `Innovation & growth` | yes |
+  | 1897452861 | `Applied Micro` | no - reading list, not a schedule |
+  | 1094562378 | `Geoeconomics` | yes |
+  | 768851018 | `WP seminars` | yes, once it has a header row |
+  | 1217819170 | `Members` | no - empty; the directory is a separate file |
+
+- `WP seminars` is currently empty. The script ignores it safely until row 1
+  has the same headers as the other schedule tabs.
 - The Applied Microeconomics tab is deliberately excluded: it is a topic reading
   list (`Methodology / Level / Topic / Paper / Link`), not a session schedule, so
   it has no `Status`, `Presenter` or `Date` column to work from.

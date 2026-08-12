@@ -18,7 +18,7 @@ const CONFIG = {
    * intentionally absent: it is a topic reading list, not a session schedule,
    * so it has none of the columns below.
    */
-  SCHEDULE_SHEETS: ['Growth & Innovation', 'Geoeconomics', 'Seminars'],
+  SCHEDULE_SHEETS: ['Innovation & growth', 'Geoeconomics', 'WP seminars'],
 
   /**
    * Column headers used on the schedule tabs (row 1). Columns are looked up by

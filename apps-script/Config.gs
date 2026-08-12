@@ -11,7 +11,7 @@ const CONFIG = {
    * confirm the Apps Script project is running the version you think it is
    * after re-pasting.
    */
-  VERSION: '2026-08-12e',
+  VERSION: '2026-08-12f',
 
   /**
    * Organizers who receive registration notifications and announcement
@@ -24,7 +24,14 @@ const CONFIG = {
   ],
 
   /** Shown as the sender name on outgoing mail. */
-  SENDER_NAME: 'SYVE Schedule Bot',
+  SENDER_NAME: 'The Society of Young Vietnamese Economists',
+
+  /**
+   * Where to direct questions. Used in the no-reply footer and set as the
+   * Reply-To header, so a reply still reaches the society rather than the
+   * personal account that authorized the script.
+   */
+  CONTACT_EMAIL: 'syve.info@gmail.com',
 
   /**
    * Tabs in THIS workbook that hold a session schedule.

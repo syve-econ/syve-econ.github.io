@@ -81,17 +81,16 @@ function sendRegistrationEmail_(data, editorEmail) {
     '<p><a href="' +
     escapeHtml_(scheduleRowUrl_(data)) +
     '">Open this row in the schedule</a></p>' +
-    '<p style="color:#888;font-size:12px;">Sent automatically by ' +
-    escapeHtml_(CONFIG.SENDER_NAME) +
-    '.</p>' +
+    footerHtml_() +
     '</div>';
 
   MailApp.sendEmail({
     to: notifyRecipients_(),
     subject: subject,
     htmlBody: html,
-    body: plainTextFallback_(data, when, editorEmail),
+    body: plainTextFallback_(data, when, editorEmail) + footerText_(),
     name: CONFIG.SENDER_NAME,
+    replyTo: CONFIG.CONTACT_EMAIL,
   });
 }
 

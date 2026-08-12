@@ -89,6 +89,7 @@ function buildAnnouncementHtml_(sessions) {
     return (
       '<div style="font-family:Helvetica,Arial,sans-serif;font-size:14px;">' +
       '<p>There are no upcoming sessions with a date on the schedule yet.</p>' +
+      footerHtml_() +
       '</div>'
     );
   }
@@ -124,11 +125,12 @@ function buildAnnouncementHtml_(sessions) {
     '<p>Here is the upcoming SYVE schedule.</p>' +
     blocks +
     buildZoomBlock_() +
-    '<p>See you there,<br>SYVE</p>' +
+    '<p>See you there,<br>The Society of Young Vietnamese Economists</p>' +
     '<p style="color:#888;font-size:12px;">' +
     'Full schedule and materials: <a href="' +
     escapeHtml_(SpreadsheetApp.getActiveSpreadsheet().getUrl()) +
     '">schedule workbook</a>.</p>' +
+    footerHtml_() +
     '</div>'
   );
 }
@@ -179,6 +181,7 @@ function previewAnnouncement() {
       '</strong> members.</p>' +
       buildAnnouncementHtml_(sessions),
     name: CONFIG.SENDER_NAME,
+    replyTo: CONFIG.CONTACT_EMAIL,
   });
 
   ui.alert(
@@ -240,6 +243,7 @@ function sendAnnouncementToAllMembers() {
         subject: 'SYVE upcoming schedule',
         htmlBody: html,
         name: CONFIG.SENDER_NAME,
+        replyTo: CONFIG.CONTACT_EMAIL,
       });
       sent++;
     } catch (err) {

@@ -179,6 +179,31 @@ function readAllScheduleRows_(sheet) {
   return rows;
 }
 
+/**
+ * The no-reply footer, defined once so every outgoing email carries the same
+ * wording.
+ */
+function footerHtml_() {
+  const contact = escapeHtml_(CONFIG.CONTACT_EMAIL);
+  return (
+    '<p style="color:#888;font-size:12px;margin-top:24px;' +
+    'border-top:1px solid #eee;padding-top:12px;">' +
+    'This email was sent automatically. Please do not reply.<br>' +
+    'If you have any inquiry, please contact ' +
+    '<a href="mailto:' + contact + '">' + contact + '</a>.' +
+    '</p>'
+  );
+}
+
+/** Plain-text version of the no-reply footer. */
+function footerText_() {
+  return (
+    '\n\n--\n' +
+    'This email was sent automatically. Please do not reply.\n' +
+    'If you have any inquiry, please contact ' + CONFIG.CONTACT_EMAIL + '.'
+  );
+}
+
 /** Basic shape check, enough to keep malformed cells out of a recipient list. */
 function isValidEmail_(email) {
   return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(String(email).trim());

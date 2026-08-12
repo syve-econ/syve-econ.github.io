@@ -72,3 +72,5 @@ exclude:
   - README.md
   - LICENSE.md
   - CITATION.cff
+  # Google Apps Script source for the schedule workbook; not part of the site
+  - apps-script

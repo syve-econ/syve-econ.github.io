@@ -11,6 +11,8 @@ We organize seminars to support and showcase the work of graduate students, post
 
 Our goal is to provide a space for emerging scholars to receive feedback on their research from discussants while fostering intellectual exchange. We encourage submissions from early-career researchers, particularly those working on cutting-edge economic research. We welcome presentations from all SYVE members and invited guests.
 
+**Materials & registration**: [Link](https://docs.google.com/spreadsheets/d/1altDTf844gViy_36GhwhlPsTjh_pMVfMjq7Ua4fZi7Y/edit?gid=768851018#gid=768851018)
+
 {% include section.html %}
 
 ## Past Seminars

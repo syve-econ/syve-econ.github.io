@@ -7,6 +7,13 @@
 
 const CONFIG = {
   /**
+   * Bumped whenever these files change. "Check setup" prints it, so you can
+   * confirm the Apps Script project is running the version you think it is
+   * after re-pasting.
+   */
+  VERSION: '2026-08-12e',
+
+  /**
    * Organizers who receive registration notifications and announcement
    * previews. Add or remove addresses here; everything else follows.
    */
@@ -21,9 +28,10 @@ const CONFIG = {
 
   /**
    * Tabs in THIS workbook that hold a session schedule.
-   * Names must match the tab names exactly. The Applied Microeconomics tab is
-   * intentionally absent: it is a topic reading list, not a session schedule,
-   * so it has none of the columns below.
+   * Names must match the tab names exactly.
+   *
+   * These four do not share one column layout, which is fine: columns are
+   * matched by header text, never by position. See HEADERS below.
    */
   SCHEDULE_SHEETS: [
     'Innovation & growth',

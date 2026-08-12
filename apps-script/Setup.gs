@@ -124,6 +124,18 @@ function checkSetup() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const lines = [];
 
+  lines.push('VERSION');
+  lines.push('  Config.gs: ' + (CONFIG.VERSION || 'unknown - Config.gs is out of date'));
+  lines.push('');
+
+  lines.push('NOTIFICATIONS GO TO');
+  try {
+    lines.push('  ' + notifyRecipients_().split(',').join('\n  '));
+  } catch (err) {
+    lines.push('  ERROR: ' + err.message);
+  }
+  lines.push('');
+
   lines.push('SCHEDULE TABS');
   CONFIG.SCHEDULE_SHEETS.forEach(function (name) {
     const sheet = ss.getSheetByName(name);

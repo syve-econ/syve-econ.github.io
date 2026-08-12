@@ -190,6 +190,15 @@ function isValidEmail_(email) {
  * produce an invalid recipient list.
  */
 function notifyRecipients_(extraEmails) {
+  // A stale Config.gs is the usual cause: NOTIFY_EMAIL (singular) was replaced
+  // by NOTIFY_EMAILS (a list). Say so, rather than failing on undefined.
+  if (!Array.isArray(CONFIG.NOTIFY_EMAILS)) {
+    throw new Error(
+      'CONFIG.NOTIFY_EMAILS is missing or is not a list. Config.gs is out of ' +
+        'date - re-paste it, then reload the spreadsheet.'
+    );
+  }
+
   const all = CONFIG.NOTIFY_EMAILS.concat(extraEmails || []);
   const seen = {};
   const clean = [];
@@ -203,6 +212,10 @@ function notifyRecipients_(extraEmails) {
     seen[key] = true;
     clean.push(trimmed);
   });
+
+  if (!clean.length) {
+    throw new Error('No valid address in CONFIG.NOTIFY_EMAILS.');
+  }
 
   return clean.join(',');
 }

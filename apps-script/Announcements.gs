@@ -116,9 +116,9 @@ function buildAnnouncementHtml_(sessions) {
         detailRow_('Paper', s.title) +
         detailRow_('Authors', s.authors) +
         detailRow_('Date & time', when) +
+        detailRow_('Fields', s.fields) +
         detailRow_('Paper link', s.link, true) +
         detailRow_('Slides', s.slides, true) +
-        (CONFIG.ZOOM_LINK ? detailRow_('Zoom', CONFIG.ZOOM_LINK, true) : '') +
         '</table>' +
         '</div>'
       );
@@ -131,11 +131,36 @@ function buildAnnouncementHtml_(sessions) {
     '<p>Dear all,</p>' +
     '<p>Here is the upcoming SYVE schedule.</p>' +
     blocks +
+    buildZoomBlock_() +
     '<p>See you there,<br>SYVE</p>' +
     '<p style="color:#888;font-size:12px;">' +
     'Full schedule and materials: <a href="' +
     escapeHtml_(SpreadsheetApp.getActiveSpreadsheet().getUrl()) +
     '">schedule workbook</a>.</p>' +
+    '</div>'
+  );
+}
+
+/**
+ * The standing Zoom room, shown once per announcement because the same room is
+ * used for every session. Renders nothing until the details are set via
+ * SYVE -> Set Zoom details.
+ */
+function buildZoomBlock_() {
+  const zoom = getZoomDetails_();
+  if (!zoom.link && !zoom.meetingId) return '';
+
+  return (
+    '<div style="margin:0 0 24px 0;padding:12px;background:#f5f7fa;' +
+    'border-radius:4px;">' +
+    '<h3 style="margin:0 0 8px 0;font-size:15px;">Join</h3>' +
+    '<table style="border-collapse:collapse;">' +
+    detailRow_('Zoom', zoom.link, true) +
+    detailRow_('Meeting ID', zoom.meetingId) +
+    detailRow_('Passcode', zoom.passcode) +
+    '</table>' +
+    '<p style="margin:8px 0 0 0;color:#666;font-size:12px;">' +
+    'The same room is used for every session.</p>' +
     '</div>'
   );
 }

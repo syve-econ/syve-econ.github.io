@@ -13,6 +13,7 @@ function onOpen() {
     .addSeparator()
     .addItem('Install / repair triggers', 'installTriggers')
     .addItem('Add Status dropdown to schedule tabs', 'installStatusDropdown')
+    .addItem('Set Zoom details', 'setZoomDetails')
     .addItem('Check setup', 'checkSetup')
     .addToUi();
 }
@@ -74,6 +75,49 @@ function installStatusDropdown() {
   );
 }
 
+/**
+ * Stores the standing Zoom details in Script Properties.
+ *
+ * Kept out of source on purpose: this script is versioned in a public
+ * repository, and a join link plus passcode there would let anyone into the
+ * meeting. Script Properties are private to this Apps Script project.
+ */
+function setZoomDetails() {
+  const ui = SpreadsheetApp.getUi();
+  const props = PropertiesService.getScriptProperties();
+  const keys = CONFIG.ZOOM_KEYS;
+  const current = getZoomDetails_();
+
+  const prompts = [
+    { key: keys.link, label: 'Zoom join link', now: current.link },
+    { key: keys.meetingId, label: 'Meeting ID', now: current.meetingId },
+    { key: keys.passcode, label: 'Passcode', now: current.passcode },
+  ];
+
+  for (let i = 0; i < prompts.length; i++) {
+    const p = prompts[i];
+    const response = ui.prompt(
+      'Set Zoom details (' + (i + 1) + ' of ' + prompts.length + ')',
+      p.label + (p.now ? '\n\nCurrent: ' + p.now : '') + '\n\nLeave blank to keep the current value.',
+      ui.ButtonSet.OK_CANCEL
+    );
+    if (response.getSelectedButton() !== ui.Button.OK) return;
+
+    const value = response.getResponseText().trim();
+    if (value) props.setProperty(p.key, value);
+  }
+
+  const saved = getZoomDetails_();
+  ui.alert(
+    'Zoom details saved',
+    'Link:       ' + (saved.link || '(not set)') +
+      '\nMeeting ID: ' + (saved.meetingId || '(not set)') +
+      '\nPasscode:   ' + (saved.passcode || '(not set)') +
+      '\n\nThese appear in announcement emails only.',
+    ui.ButtonSet.OK
+  );
+}
+
 /** Reports whether the configuration matches the actual sheets. */
 function checkSetup() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
@@ -87,12 +131,13 @@ function checkSetup() {
       return;
     }
     const headerMap = getHeaderMap_(sheet);
-    const missing = Object.keys(CONFIG.HEADERS).filter(function (key) {
+    const missing = CONFIG.REQUIRED_HEADERS.filter(function (key) {
       return !headerMap[CONFIG.HEADERS[key].trim().toLowerCase()];
     });
     lines.push(
-      '  OK: "' + name + '"' +
-        (missing.length ? ' - missing columns: ' + missing.join(', ') : '')
+      missing.length
+        ? '  PROBLEM: "' + name + '" is missing required columns: ' + missing.join(', ')
+        : '  OK: "' + name + '"'
     );
   });
 

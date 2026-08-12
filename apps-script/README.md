@@ -51,11 +51,23 @@ installable trigger, which runs with full authorization.
   | 0 | `Innovation & growth` | yes |
   | 1897452861 | `Applied Micro` | no - reading list, not a schedule |
   | 1094562378 | `Geoeconomics` | yes |
-  | 768851018 | `WP seminars` | yes, once it has a header row |
-  | 1217819170 | `Members` | no - empty; the directory is a separate file |
+  | 768851018 | `WP seminars` | yes |
 
-- `WP seminars` is currently empty. The script ignores it safely until row 1
-  has the same headers as the other schedule tabs.
+- The three schedule tabs do **not** have identical columns. `WP seminars` has
+  an extra `Fields` column, which shifts everything after it. This is fine:
+  columns are matched by header text, never by position.
+- Required on every schedule tab: `Authors`, `Title`, `Presenter`, `Status`,
+  `Date`. Everything else (`Type`, `Fields`, `Time`, `Slides`, `Link`,
+  `Recordings`) is optional and simply omitted from emails when absent.
+
+## Zoom details
+
+The standing Zoom room is stored in **Script Properties**, not in this file,
+because this repository is public and a join link plus passcode in public source
+would let anyone into the meeting.
+
+Set them once with **SYVE → Set Zoom details**. They then appear in a single
+"Join" block in every announcement. Until they are set, the block is omitted.
 - The Applied Microeconomics tab is deliberately excluded: it is a topic reading
   list (`Methodology / Level / Topic / Paper / Link`), not a session schedule, so
   it has no `Status`, `Presenter` or `Date` column to work from.

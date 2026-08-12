@@ -22,12 +22,18 @@ const CONFIG = {
 
   /**
    * Column headers used on the schedule tabs (row 1). Columns are looked up by
-   * these names, so reordering or inserting columns in the sheet is safe.
+   * these names, so reordering or inserting columns in the sheet is safe, and
+   * a column that exists on only some tabs is simply skipped.
+   *
+   * The three schedule tabs genuinely differ: "Fields" exists only on
+   * WP seminars, and "Recordings" is not currently on any tab but is kept here
+   * so it starts working automatically if it is added back.
    */
   HEADERS: {
     authors: 'Authors',
     title: 'Title',
     type: 'Type',
+    fields: 'Fields',
     presenter: 'Presenter',
     status: 'Status',
     date: 'Date',
@@ -36,6 +42,12 @@ const CONFIG = {
     recordings: 'Recordings',
     link: 'Link',
   },
+
+  /**
+   * Columns every schedule tab must have. Anything in HEADERS but not here is
+   * optional, and "Check setup" will not report it as a problem when absent.
+   */
+  REQUIRED_HEADERS: ['authors', 'title', 'presenter', 'status', 'date'],
 
   /**
    * Editing the Status cell to one of these values sends the notification.
@@ -63,8 +75,21 @@ const CONFIG = {
     EMAIL_HEADER: 'Email',
   },
 
-  /** Default Zoom link included in announcements. Leave '' to omit. */
-  ZOOM_LINK: '',
+  /**
+   * Zoom details for announcements.
+   *
+   * These are NOT stored in this file on purpose: this script is versioned in a
+   * public GitHub repository, and a join link plus passcode in public source
+   * lets anyone drop into the meeting. They live in Script Properties instead,
+   * which are private to this Apps Script project.
+   *
+   * Set them once with: SYVE -> Set Zoom details.
+   */
+  ZOOM_KEYS: {
+    link: 'ZOOM_LINK',
+    meetingId: 'ZOOM_MEETING_ID',
+    passcode: 'ZOOM_PASSCODE',
+  },
 
   /** Timezone used to format dates in emails. */
   TIMEZONE: 'Asia/Ho_Chi_Minh',

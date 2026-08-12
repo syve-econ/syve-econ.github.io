@@ -71,6 +71,7 @@ function sendRegistrationEmail_(data, editorEmail) {
     detailRow_('Authors', data.authors) +
     detailRow_('Date & time', when) +
     detailRow_('Type', data.type) +
+    detailRow_('Fields', data.fields) +
     detailRow_('Status', data.status) +
     detailRow_('Paper link', data.link, true) +
     detailRow_('Registered by', editorEmail) +
@@ -111,6 +112,7 @@ function plainTextFallback_(data, when, editorEmail) {
     'Authors:     ' + (data.authors || '-'),
     'Date & time: ' + when,
     'Type:        ' + (data.type || '-'),
+    'Fields:      ' + (data.fields || '-'),
     'Status:      ' + (data.status || '-'),
     'Paper link:  ' + (data.link || '-'),
     'Registered by: ' + (editorEmail || '-'),

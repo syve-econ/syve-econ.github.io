@@ -82,6 +82,7 @@ function readScheduleRow_(sheet, row) {
     authors: formatValue_(readField_(sheet, headerMap, row, h.authors)),
     title: formatValue_(readField_(sheet, headerMap, row, h.title)),
     type: formatValue_(readField_(sheet, headerMap, row, h.type)),
+    fields: formatValue_(readField_(sheet, headerMap, row, h.fields)),
     presenter: formatValue_(readField_(sheet, headerMap, row, h.presenter)),
     status: formatValue_(readField_(sheet, headerMap, row, h.status)),
     date: formatValue_(readField_(sheet, headerMap, row, h.date), 'date'),
@@ -89,6 +90,20 @@ function readScheduleRow_(sheet, row) {
     time: formatValue_(readField_(sheet, headerMap, row, h.time), 'time'),
     recordings: formatValue_(readField_(sheet, headerMap, row, h.recordings)),
     link: formatValue_(readField_(sheet, headerMap, row, h.link)),
+  };
+}
+
+/**
+ * Reads the Zoom details from Script Properties.
+ * Returns {link, meetingId, passcode}; any unset value comes back as ''.
+ */
+function getZoomDetails_() {
+  const props = PropertiesService.getScriptProperties();
+  const keys = CONFIG.ZOOM_KEYS;
+  return {
+    link: props.getProperty(keys.link) || '',
+    meetingId: props.getProperty(keys.meetingId) || '',
+    passcode: props.getProperty(keys.passcode) || '',
   };
 }
 

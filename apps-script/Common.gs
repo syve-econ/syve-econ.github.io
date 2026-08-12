@@ -23,11 +23,34 @@ function getHeaderMap_(sheet) {
   return map;
 }
 
-/** Reads one field from a row using the configured header name. */
-function readField_(sheet, headerMap, row, headerName) {
+/**
+ * Picks one field out of an already-read row of values.
+ * `values` is 0-indexed; the header map is 1-indexed.
+ */
+function pickField_(headerMap, values, headerName) {
   const col = headerMap[String(headerName).trim().toLowerCase()];
   if (!col) return '';
-  return sheet.getRange(row, col).getValue();
+  const value = values[col - 1];
+  return value === undefined ? '' : value;
+}
+
+/**
+ * Coerces a cell value to a Date, accepting both real date cells and text that
+ * looks like a date. Returns null if it cannot be read as one.
+ */
+function toDate_(value) {
+  if (Object.prototype.toString.call(value) === '[object Date]') {
+    return isNaN(value.getTime()) ? null : value;
+  }
+  const text = String(value === undefined || value === null ? '' : value).trim();
+  if (!text) return null;
+
+  // Accept yyyy/mm/dd and yyyy-mm-dd, the formats used in this workbook.
+  const m = text.match(/^(\d{4})[/-](\d{1,2})[/-](\d{1,2})$/);
+  if (!m) return null;
+
+  const parsed = new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
+  return isNaN(parsed.getTime()) ? null : parsed;
 }
 
 /**
@@ -69,28 +92,71 @@ function escapeHtml_(text) {
 }
 
 /**
- * Reads the whole row of a schedule sheet into a plain object keyed by the
- * logical field names in CONFIG.HEADERS.
+ * Builds a session object from a row of already-read cell values.
+ * This is the single place the sheet's columns are mapped to field names.
  */
-function readScheduleRow_(sheet, row) {
-  const headerMap = getHeaderMap_(sheet);
+function rowFromValues_(sheetName, rowNumber, headerMap, values) {
   const h = CONFIG.HEADERS;
+  const pick = function (headerName) {
+    return pickField_(headerMap, values, headerName);
+  };
 
   return {
-    sheetName: sheet.getName(),
-    row: row,
-    authors: formatValue_(readField_(sheet, headerMap, row, h.authors)),
-    title: formatValue_(readField_(sheet, headerMap, row, h.title)),
-    type: formatValue_(readField_(sheet, headerMap, row, h.type)),
-    fields: formatValue_(readField_(sheet, headerMap, row, h.fields)),
-    presenter: formatValue_(readField_(sheet, headerMap, row, h.presenter)),
-    status: formatValue_(readField_(sheet, headerMap, row, h.status)),
-    date: formatValue_(readField_(sheet, headerMap, row, h.date), 'date'),
-    slides: formatValue_(readField_(sheet, headerMap, row, h.slides)),
-    time: formatValue_(readField_(sheet, headerMap, row, h.time), 'time'),
-    recordings: formatValue_(readField_(sheet, headerMap, row, h.recordings)),
-    link: formatValue_(readField_(sheet, headerMap, row, h.link)),
+    sheetName: sheetName,
+    row: rowNumber,
+    authors: formatValue_(pick(h.authors)),
+    title: formatValue_(pick(h.title)),
+    type: formatValue_(pick(h.type)),
+    fields: formatValue_(pick(h.fields)),
+    presenter: formatValue_(pick(h.presenter)),
+    status: formatValue_(pick(h.status)),
+    date: formatValue_(pick(h.date), 'date'),
+    slides: formatValue_(pick(h.slides)),
+    time: formatValue_(pick(h.time), 'time'),
+    recordings: formatValue_(pick(h.recordings)),
+    link: formatValue_(pick(h.link)),
+    dateValue: toDate_(pick(h.date)),
   };
+}
+
+/**
+ * Reads one row of a schedule sheet in a single call.
+ * Used by the edit trigger, where only the edited row matters.
+ */
+function readScheduleRow_(sheet, row) {
+  const lastCol = sheet.getLastColumn();
+  if (lastCol < 1) return rowFromValues_(sheet.getName(), row, {}, []);
+
+  const headerMap = getHeaderMap_(sheet);
+  const values = sheet.getRange(row, 1, 1, lastCol).getValues()[0];
+  return rowFromValues_(sheet.getName(), row, headerMap, values);
+}
+
+/**
+ * Reads every data row of a schedule sheet in ONE call.
+ *
+ * Used by the announcement builder. Reading cell by cell there meant roughly a
+ * dozen round-trips per row, which across 50+ rows on three tabs was slow
+ * enough to risk the execution time limit.
+ */
+function readAllScheduleRows_(sheet) {
+  const lastRow = sheet.getLastRow();
+  const lastCol = sheet.getLastColumn();
+  if (lastRow <= CONFIG.HEADER_ROW || lastCol < 1) return [];
+
+  const values = sheet.getRange(1, 1, lastRow, lastCol).getValues();
+
+  const headerMap = {};
+  values[CONFIG.HEADER_ROW - 1].forEach(function (header, i) {
+    const key = String(header).trim().toLowerCase();
+    if (key && !(key in headerMap)) headerMap[key] = i + 1;
+  });
+
+  const rows = [];
+  for (let i = CONFIG.HEADER_ROW; i < values.length; i++) {
+    rows.push(rowFromValues_(sheet.getName(), i + 1, headerMap, values[i]));
+  }
+  return rows;
 }
 
 /**

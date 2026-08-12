@@ -70,20 +70,15 @@ function getUpcomingSessions_() {
     const sheet = ss.getSheetByName(sheetName);
     if (!sheet) return;
 
-    const headerMap = getHeaderMap_(sheet);
-    const dateCol = headerMap[CONFIG.HEADERS.date.trim().toLowerCase()];
-    if (!dateCol) return;
+    readAllScheduleRows_(sheet).forEach(function (data) {
+      // A row with no readable date is not a scheduled session yet.
+      if (!data.dateValue || data.dateValue < today) return;
+      // Skip rows that are only a paper suggestion with nobody attached.
+      if (!data.presenter && !data.title) return;
 
-    const lastRow = sheet.getLastRow();
-    for (let row = CONFIG.HEADER_ROW + 1; row <= lastRow; row++) {
-      const raw = sheet.getRange(row, dateCol).getValue();
-      if (!(Object.prototype.toString.call(raw) === '[object Date]')) continue;
-      if (raw < today) continue;
-
-      const data = readScheduleRow_(sheet, row);
-      data.sortKey = raw.getTime();
+      data.sortKey = data.dateValue.getTime();
       sessions.push(data);
-    }
+    });
   });
 
   sessions.sort(function (a, b) {

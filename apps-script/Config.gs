@@ -11,7 +11,7 @@ const CONFIG = {
    * confirm the Apps Script project is running the version you think it is
    * after re-pasting.
    */
-  VERSION: '2026-08-12h',
+  VERSION: '2026-08-13a',
 
   /**
    * Organizers who receive registration notifications and announcement
@@ -23,8 +23,14 @@ const CONFIG = {
     'manhduc.doan03@gmail.com',
   ],
 
-  /** Shown as the sender name on outgoing mail. */
+  /**
+   * Shown as the sender name on outgoing mail, and used as the signature in
+   * the footer of every email. One name, one place to change it.
+   */
   SENDER_NAME: 'The Society of Young Vietnamese Economists',
+
+  /** Public site, shown under the signature. Leave blank to omit the line. */
+  WEBSITE_URL: 'https://syve-econ.github.io/',
 
   /**
    * Where to direct questions. Used in the no-reply footer and set as the
@@ -104,6 +110,48 @@ const CONFIG = {
 
   /** Shown wherever a date or time has not been filled in yet. */
   TBD_LABEL: 'TBD',
+
+  /**
+   * Automatic reminder sent shortly before a session starts.
+   *
+   * A time-driven trigger runs every CHECK_EVERY_MINUTES, looks for sessions
+   * starting within the next LEAD_MINUTES, and mails them once. "Once" is
+   * enforced by a log kept in Script Properties, keyed by row AND start time,
+   * so moving a session to a new slot earns it a fresh reminder.
+   *
+   * A row is only ever reminded when it has BOTH a date and a readable time.
+   * A session with Time blank cannot be reminded about - there is nothing to
+   * count back from. "Check setup" lists any upcoming session in that state.
+   */
+  REMINDER: {
+    /** Master switch. Set false to stop reminders without deleting anything. */
+    ENABLED: true,
+
+    /** How long before the start time the reminder goes out. */
+    LEAD_MINUTES: 30,
+
+    /**
+     * How often the scan runs. Apps Script only accepts 1, 5, 10, 15 or 30
+     * here. Five means a reminder lands 25-30 minutes ahead, never late.
+     */
+    CHECK_EVERY_MINUTES: 5,
+
+    /**
+     * Who gets it:
+     *   'members'    - everyone in the members directory (same as announcements)
+     *   'presenter'  - the organizers plus the presenter, matched by name
+     *                  against the members directory
+     *   'organizers' - the organizers only; useful for a few weeks of
+     *                  test running before pointing it at the membership
+     */
+    AUDIENCE: 'members',
+
+    /** Script Property holding the "already reminded" log. */
+    SENT_KEY: 'REMINDERS_SENT',
+
+    /** How long a log entry is kept after its session, before pruning. */
+    KEEP_RECORD_DAYS: 3,
+  },
 
   /** Row 1 is the header row; data starts on row 2. */
   HEADER_ROW: 1,

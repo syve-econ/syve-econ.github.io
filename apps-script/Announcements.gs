@@ -136,7 +136,9 @@ function buildAnnouncementHtml_(sessions) {
     '<p>Here is the upcoming SYVE schedule.</p>' +
     blocks +
     buildZoomBlock_() +
-    '<p>See you there,<br>The Society of Young Vietnamese Economists</p>' +
+    // No sign-off name here: footerHtml_() signs every email with
+    // CONFIG.SENDER_NAME, and repeating it reads as a mistake.
+    '<p>See you there,</p>' +
     '<p style="color:#888;font-size:12px;">' +
     'Full schedule and materials: <a href="' +
     escapeHtml_(SpreadsheetApp.getActiveSpreadsheet().getUrl()) +

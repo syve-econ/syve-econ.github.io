@@ -223,6 +223,91 @@ function formatWhen_(date, time) {
   );
 }
 
+/**
+ * Reads a time-of-day cell into {hours, minutes}, or null when it cannot be
+ * read as a time.
+ *
+ * A Time cell that Sheets stores as a real time has already been rendered to
+ * "HH:mm" by formatValue_ before it gets here. The looser spellings below are
+ * for tabs where the column is plain text: "20:00", "20h", "20h00", "8:00 PM",
+ * "8pm", "2000".
+ */
+function parseTimeOfDay_(value) {
+  const text = String(value === undefined || value === null ? '' : value)
+    .trim()
+    .toLowerCase();
+  if (!text) return null;
+
+  const match = text.match(/^(\d{1,2})\s*[:h.]?\s*(\d{2})?\s*(am|pm)?$/);
+  if (!match) return null;
+
+  let hours = Number(match[1]);
+  const minutes = match[2] === undefined ? 0 : Number(match[2]);
+  const suffix = match[3];
+
+  if (suffix === 'pm' && hours < 12) hours += 12;
+  if (suffix === 'am' && hours === 12) hours = 0;
+  if (hours > 23 || minutes > 59) return null;
+
+  return { hours: hours, minutes: minutes };
+}
+
+/**
+ * Converts wall-clock parts into a comparable number of minutes.
+ *
+ * Date.UTC is used deliberately, and NOT because these are UTC times: it is
+ * simply an arithmetic that ignores whatever timezone the script happens to
+ * run in. Subtracting two of these gives the true gap in minutes as long as
+ * both were built from the same timezone's wall clock, which is what the
+ * reminder needs. Vietnam has no DST, so there is no discontinuity to handle.
+ */
+function wallMinutes_(year, month, day, hours, minutes) {
+  return Date.UTC(year, month - 1, day, hours, minutes) / 60000;
+}
+
+/** Now, as wall-clock minutes in CONFIG.TIMEZONE. */
+function nowWallMinutes_() {
+  const parts = Utilities.formatDate(
+    new Date(),
+    CONFIG.TIMEZONE,
+    'yyyy-MM-dd-HH-mm'
+  ).split('-');
+
+  return wallMinutes_(
+    Number(parts[0]),
+    Number(parts[1]),
+    Number(parts[2]),
+    Number(parts[3]),
+    Number(parts[4])
+  );
+}
+
+/**
+ * When a session starts, as wall-clock minutes in CONFIG.TIMEZONE.
+ * Returns null when the row has no date, or no time that can be read as one -
+ * in which case there is nothing to count 30 minutes back from.
+ */
+function sessionStartMinutes_(data) {
+  if (!data.dateValue) return null;
+
+  const timeOfDay = parseTimeOfDay_(data.time);
+  if (!timeOfDay) return null;
+
+  const ymd = Utilities.formatDate(
+    data.dateValue,
+    CONFIG.TIMEZONE,
+    'yyyy-MM-dd'
+  ).split('-');
+
+  return wallMinutes_(
+    Number(ymd[0]),
+    Number(ymd[1]),
+    Number(ymd[2]),
+    timeOfDay.hours,
+    timeOfDay.minutes
+  );
+}
+
 /** True if the status means the session is over or called off. */
 function isFinishedStatus_(status) {
   const needle = String(status || '').trim().toLowerCase();
@@ -233,14 +318,24 @@ function isFinishedStatus_(status) {
 }
 
 /**
- * The no-reply footer, defined once so every outgoing email carries the same
- * wording.
+ * The signature and no-reply footer, defined once so every outgoing email
+ * carries the same wording: who sent it, where to read more, and why replying
+ * to it is pointless.
  */
 function footerHtml_() {
   const contact = escapeHtml_(CONFIG.CONTACT_EMAIL);
+  const site = String(CONFIG.WEBSITE_URL || '').trim();
+  const siteLine = site
+    ? '<br><a href="' + escapeHtml_(site) + '">' + escapeHtml_(site) + '</a>'
+    : '';
+
   return (
-    '<p style="color:#888;font-size:12px;margin-top:24px;' +
+    '<p style="color:#555;font-size:12px;margin-top:24px;' +
     'border-top:1px solid #eee;padding-top:12px;">' +
+    '<strong>' + escapeHtml_(CONFIG.SENDER_NAME) + '</strong>' +
+    siteLine +
+    '</p>' +
+    '<p style="color:#888;font-size:12px;margin-top:8px;">' +
     'This email was sent automatically. Please do not reply.<br>' +
     'If you have any inquiry, please contact ' +
     '<a href="mailto:' + contact + '">' + contact + '</a>.' +
@@ -248,10 +343,14 @@ function footerHtml_() {
   );
 }
 
-/** Plain-text version of the no-reply footer. */
+/** Plain-text version of the signature and no-reply footer. */
 function footerText_() {
+  const site = String(CONFIG.WEBSITE_URL || '').trim();
   return (
     '\n\n--\n' +
+    CONFIG.SENDER_NAME + '\n' +
+    (site ? site + '\n' : '') +
+    '\n' +
     'This email was sent automatically. Please do not reply.\n' +
     'If you have any inquiry, please contact ' + CONFIG.CONTACT_EMAIL + '.'
   );

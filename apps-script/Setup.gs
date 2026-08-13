@@ -11,6 +11,10 @@ function onOpen() {
     .addItem('Preview announcement (to me only)', 'previewAnnouncement')
     .addItem('Send announcement to all members', 'sendAnnouncementToAllMembers')
     .addSeparator()
+    .addItem('Send test reminder (selected row, to me only)', 'testReminderForSelectedRow')
+    .addItem('Run reminder check now', 'runReminderCheckNow')
+    .addItem('Clear reminder history', 'clearReminderHistory')
+    .addSeparator()
     .addItem('Install / repair triggers', 'installTriggers')
     .addItem('Add Status dropdown to schedule tabs', 'installStatusDropdown')
     .addItem('Set Zoom details', 'setZoomDetails')
@@ -20,14 +24,19 @@ function onOpen() {
 }
 
 /**
- * Creates the installable onEdit trigger. Safe to run repeatedly: existing
- * triggers for the same handler are removed first, so it never doubles up.
+ * Creates both triggers: the installable onEdit that sends registration
+ * notifications, and the time-driven scan that sends session reminders.
+ *
+ * Safe to run repeatedly: existing triggers for the same handlers are removed
+ * first, so it never doubles up (two reminder triggers would mean two scans
+ * racing, and the lock in Reminders.gs would silently drop one of them).
  */
 function installTriggers() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const handlers = ['onEditInstallable', 'sendDueReminders'];
 
   ScriptApp.getProjectTriggers().forEach(function (trigger) {
-    if (trigger.getHandlerFunction() === 'onEditInstallable') {
+    if (handlers.indexOf(trigger.getHandlerFunction()) !== -1) {
       ScriptApp.deleteTrigger(trigger);
     }
   });
@@ -37,12 +46,34 @@ function installTriggers() {
     .onEdit()
     .create();
 
+  const every = reminderScanInterval_();
+  ScriptApp.newTrigger('sendDueReminders')
+    .timeBased()
+    .everyMinutes(every)
+    .create();
+
   SpreadsheetApp.getUi().alert(
-    'Trigger installed',
-    'Registration notifications will now be sent to:\n' +
-      CONFIG.NOTIFY_EMAILS.join('\n'),
+    'Triggers installed',
+    'Registration notifications go to:\n  ' +
+      CONFIG.NOTIFY_EMAILS.join('\n  ') +
+      '\n\nSession reminders: ' +
+      (CONFIG.REMINDER.ENABLED ? 'on' : 'OFF (CONFIG.REMINDER.ENABLED)') +
+      '\n  ' + CONFIG.REMINDER.LEAD_MINUTES + ' minutes before the start time' +
+      '\n  checked every ' + every + ' minutes' +
+      '\n  audience: ' + CONFIG.REMINDER.AUDIENCE,
     SpreadsheetApp.getUi().ButtonSet.OK
   );
+}
+
+/**
+ * The scan interval, clamped to a value Apps Script actually accepts.
+ * everyMinutes() takes only 1, 5, 10, 15 or 30; anything else throws, which
+ * would leave the project with an onEdit trigger and no reminder trigger.
+ */
+function reminderScanInterval_() {
+  const allowed = [1, 5, 10, 15, 30];
+  const wanted = Number(CONFIG.REMINDER.CHECK_EVERY_MINUTES);
+  return allowed.indexOf(wanted) === -1 ? 5 : wanted;
 }
 
 /** Adds a Status dropdown to the Status column of every schedule tab. */
@@ -228,15 +259,33 @@ function checkSetup() {
   });
 
   lines.push('');
-  lines.push('TRIGGER');
-  const installed = ScriptApp.getProjectTriggers().filter(function (t) {
+  lines.push('TRIGGERS');
+  const triggers = ScriptApp.getProjectTriggers();
+  const editTriggers = triggers.filter(function (t) {
     return t.getHandlerFunction() === 'onEditInstallable';
   });
+  const reminderTriggers = triggers.filter(function (t) {
+    return t.getHandlerFunction() === 'sendDueReminders';
+  });
   lines.push(
-    installed.length
-      ? '  OK: ' + installed.length + ' installable onEdit trigger(s)'
+    editTriggers.length
+      ? '  OK: ' + editTriggers.length + ' installable onEdit trigger(s)'
       : '  MISSING: run "Install / repair triggers"'
   );
+  lines.push(
+    reminderTriggers.length === 1
+      ? '  OK: reminder scan trigger'
+      : reminderTriggers.length
+        ? '  PROBLEM: ' + reminderTriggers.length +
+          ' reminder triggers - run "Install / repair triggers" to fix'
+        : '  MISSING: reminder scan - run "Install / repair triggers"'
+  );
+
+  lines.push('');
+  lines.push('REMINDERS');
+  reminderStatusLines_().forEach(function (line) {
+    lines.push(line);
+  });
 
   lines.push('');
   lines.push('MEMBERS DIRECTORY');

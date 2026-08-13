@@ -19,8 +19,8 @@ Our goal is to provide a space for emerging scholars to receive feedback on thei
 
 | Date | Presenter | Title | Affiliation | Slides | Video |
 |------|-----------|-------|-------------|--------|-------|
-| 2026/08/08 | Anh Tran | To Rent or Not to Rent? Supply-side Constraints and Matching Frictions in the Housing Choice Voucher Program | Princeton University | [Slides](slide_es_at.pdf) | [Video](https://www.youtube.com/watch?v=u3hcc1_1iHI) |
-| 2026/03/21 | Giao Dang | The Impact of Abortion Access to Women's Family and Career Decisions | Western Ontario University | | [Video](https://www.youtube.com/watch?v=4HfskcWEh4c) |
+| 08/08/2026 | Anh Tran | To Rent or Not to Rent? Supply-side Constraints and Matching Frictions in the Housing Choice Voucher Program | Princeton University | [Slides](slide_es_at.pdf) | [Video](https://www.youtube.com/watch?v=u3hcc1_1iHI) |
+| 21/03/2026 | Giao Dang | The Impact of Abortion Access to Women's Family and Career Decisions | Western Ontario University | | [Video](https://www.youtube.com/watch?v=4HfskcWEh4c) |
 
 {% include section.html %}
 

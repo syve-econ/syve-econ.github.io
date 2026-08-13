@@ -11,16 +11,13 @@ The **Society of Young Vietnamese Economists (SYVE)** is a community of Vietname
 
 {% include section.html %}
 
-## Upcoming Schedule
+## Upcoming Session
 
-The next session for each of our reading groups and our seminar series. Materials from past sessions are on each group's own page.
+Our next session. Dates for the other [reading groups](reading-groups/) and the [seminar series](seminars/) are announced on their own pages, along with materials from past sessions.
 
 | Series | Date | Paper / Title | Presenter |
 |--------|------|:--------------|-----------|
-| [Growth & Innovation](reading-groups/macro/) | TBD | Hsieh, Hurst, Jones, Klenow -- [The Allocation of Talent and U.S. Economic Growth](https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA11427) | Chinh Duc Hoang |
-| [Applied Microeconomics](reading-groups/micro/) | TBD | TBD | TBD |
-| [Geoeconomics](reading-groups/geoecon/) | 2026/08/22 | TBD | Hieu Nguyen (IMF) |
-| [Seminars](seminars/) | TBD | TBD | TBD |
+| [Geoeconomics](reading-groups/geoecon/) | 22/08/2026 | TBD | Hieu Nguyen (IMF) |
 
 If you would like to present at a reading group or seminar, please [contact us](contact/).
 
